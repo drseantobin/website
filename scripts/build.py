@@ -134,7 +134,7 @@ def fmt_date(iso):
 def page(title, body, *, active="", depth=0, description=""):
     r = "../" * depth
     nav_items = [("Writing", "writing/"), ("Books", "books/"), ("Podcast", "podcast/"),
-                 ("Music", "music/"), ("About", "about/")]
+                 ("Music", "music/"), ("About", "about/"), ("Contact", "contact/")]
     nav = "".join(
         f'<a href="{r}{href}" class="{"active" if active == label else ""}">{label}</a>'
         for label, href in nav_items
@@ -180,7 +180,7 @@ def page(title, body, *, active="", depth=0, description=""):
 
 def post_card(p, depth):
     r = "../" * depth
-    badge = '<span class="badge badge-paid">Subscribers</span>' if p["paid"] else ""
+    badge = '<span class="badge badge-paid">Paid subscribers</span>' if p["paid"] else ""
     img = f'<div class="card-img" style="background-image:url(\'{esc(p["cover_image"])}\')"></div>' if p["cover_image"] else '<div class="card-img card-img-empty"></div>'
     sub = esc(p["subtitle"] or p["description"] or "")
     cat = CATS.get(p["slug"], "")
@@ -236,12 +236,12 @@ def build_home():
   <div class="listen-grid">
     <a class="listen-card" href="podcast/">
       <h3>On other people's microphones</h3>
-      <p>Conversations on psychology, deliverance, AI, and the interior life — every show Sean has been a guest on, in one place.</p>
+      <p>Conversations on psychology, deliverance, AI, and the interior life. Every show Sean has been a guest on, in one place.</p>
       <span class="listen-more">Podcast appearances →</span>
     </a>
     <a class="listen-card" href="music/">
       <h3>Worship music</h3>
-      <p>Sean leads worship — the posture the rest of the work flows from. Listen to the music.</p>
+      <p>Sean leads worship, the posture the rest of the work flows from. Listen to the music.</p>
       <span class="listen-more">The music →</span>
     </a>
   </div>
@@ -260,11 +260,11 @@ def build_home():
 
 <section class="cta-band">
   <h2>Make the exodus with us.</h2>
-  <p>One or two essays a week on faith, psychology, and staying human in the age of AI. Free to read — subscriber essays go deeper.</p>
+  <p>One or two essays a week on faith, psychology, and staying human in the age of AI. Free to read, with paid subscribers going deeper.</p>
   <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe to The Inner Exodus</a>
 </section>
 """
-    write("index.html", page(f"Dr. Sean Tobin — {SITE['tagline']}", body, active="", depth=0))
+    write("index.html", page(f"Dr. Sean Tobin · {SITE['tagline']}", body, active="", depth=0))
 
 
 def book_card(b, depth=0):
@@ -273,7 +273,7 @@ def book_card(b, depth=0):
     link_close = "</a>" if b["amazon_url"] else "</div>"
     badge = f'<span class="badge badge-gold">{esc(b["badge"])}</span>' if b.get("badge") else ""
     cover = b.get("cover", "")
-    cover_el = (f'<img class="book-cover" src="{r}{esc(cover)}" alt="{esc(b["title"])} — book cover" loading="lazy">'
+    cover_el = (f'<img class="book-cover" src="{r}{esc(cover)}" alt="{esc(b["title"])} cover" loading="lazy">'
                 if cover else f'<div class="book-cover book-cover-type"><span>{esc(b["title"])}</span></div>')
     cta = '<span class="listen-more">Buy on Amazon →</span>' if b["amazon_url"] else '<span class="card-date">Coming soon</span>'
     return f"""{link_open}
@@ -349,7 +349,7 @@ def build_writing_index():
   <p class="eyebrow">The Inner Exodus</p>
   <h1>Writing</h1>
   <p class="hero-sub">{len(INDEX)} essays on faith, psychology, and the age of AI. {n_free} are free to read here in full;
-  essays marked <span class="badge badge-paid">Subscribers</span> continue on
+  essays marked <span class="badge badge-paid">Paid subscribers</span> continue on
   <a href="{esc(SITE['substack_url'])}" target="_blank" rel="noopener">The Inner Exodus</a>.</p>
 </section>
 <section class="section writing-section">
@@ -368,7 +368,7 @@ def build_writing_index():
 </section>
 <script>{WRITING_JS}</script>
 """
-    write("writing/index.html", page("Writing — Dr. Sean Tobin", body, active="Writing", depth=1))
+    write("writing/index.html", page("Writing · Dr. Sean Tobin", body, active="Writing", depth=1))
 
 
 def build_posts():
@@ -384,12 +384,12 @@ def build_posts():
             body_content = f"""
 <div class="post-body post-body-teaser">{teaser(clean)}</div>
 <div class="paywall">
-  <p class="eyebrow">Subscriber essay</p>
-  <h3>The rest of this essay is for subscribers of The Inner Exodus.</h3>
-  <p>Subscriber essays go deeper — this one continues on Substack.</p>
+  <p class="eyebrow">Paid subscriber essay</p>
+  <h3>The rest of this piece is for paid subscribers of The Inner Exodus.</h3>
+  <p>Unlock this essay and the full archive with a paid subscription on Substack. It is what keeps the writing going.</p>
   <div class="hero-ctas">
-    <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Become a subscriber</a>
-    <a class="btn btn-ghost-dark" href="{esc(meta['url'])}" target="_blank" rel="noopener">Read on Substack</a>
+    <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Unlock with a paid subscription</a>
+    <a class="btn btn-ghost-dark" href="{esc(meta['url'])}" target="_blank" rel="noopener">Open on Substack</a>
   </div>
 </div>"""
         else:
@@ -401,7 +401,8 @@ def build_posts():
   <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe free</a>
 </div>"""
         cover = f'<div class="post-cover" style="background-image:url(\'{esc(meta["cover_image"])}\')"></div>' if meta["cover_image"] else ""
-        badge = '<span class="badge badge-paid">Subscribers</span>' if paid else ""
+        badge = (f'<a class="badge badge-paid badge-link" href="{esc(SITE["subscribe_url"])}" '
+                 f'target="_blank" rel="noopener" title="For paid subscribers of The Inner Exodus. Click to unlock.">Paid subscribers</a>') if paid else ""
         body = f"""
 <article class="post">
   <header class="page-head">
@@ -414,7 +415,7 @@ def build_posts():
 </article>
 """
         write(f"writing/{slug}/index.html",
-              page(f"{meta['title']} — Dr. Sean Tobin", body, active="Writing", depth=2,
+              page(f"{meta['title']} · Dr. Sean Tobin", body, active="Writing", depth=2,
                    description=meta["description"] or meta["subtitle"]))
 
 
@@ -428,7 +429,7 @@ def build_books():
 </section>
 <section class="section"><div class="book-grid">{cards}</div></section>
 """
-    write("books/index.html", page("Books — Dr. Sean Tobin", body, active="Books", depth=1))
+    write("books/index.html", page("Books · Dr. Sean Tobin", body, active="Books", depth=1))
 
 
 def build_podcast():
@@ -445,11 +446,11 @@ def build_podcast():
 <section class="page-head">
   <p class="eyebrow">Podcast</p>
   <h1>On other people's microphones</h1>
-  <p class="hero-sub">Conversations Sean has joined as a guest — psychology, deliverance, worship, and the age of AI.</p>
+  <p class="hero-sub">Conversations Sean has joined as a guest: psychology, deliverance, worship, and the age of AI.</p>
 </section>
 <section class="section">{listing}</section>
 """
-    write("podcast/index.html", page("Podcast — Dr. Sean Tobin", body, active="Podcast", depth=1))
+    write("podcast/index.html", page("Podcast · Dr. Sean Tobin", body, active="Podcast", depth=1))
 
 
 def build_music():
@@ -474,12 +475,75 @@ def build_music():
 <section class="page-head">
   <p class="eyebrow">Music</p>
   <h1>Worship</h1>
-  <p class="hero-sub">Sean leads worship — the posture the rest of the work flows from. Hear the full catalogue on Spotify and Apple Music.</p>
+  <p class="hero-sub">Sean leads worship, the posture the rest of the work flows from. Hear the full catalogue on Spotify and Apple Music.</p>
   {linkbar}
 </section>
 <section class="section">{listing}</section>
 """
-    write("music/index.html", page("Music — Dr. Sean Tobin", body, active="Music", depth=1))
+    write("music/index.html", page("Music · Dr. Sean Tobin", body, active="Music", depth=1))
+
+
+def build_contact():
+    email = SITE.get("contact_email", "")
+    js = (
+        "(function(){var f=document.getElementById('contact-form');if(!f)return;"
+        "var g=function(n){return f.querySelector('[name=\"'+n+'\"]');};"
+        "f.addEventListener('submit',function(e){e.preventDefault();"
+        "var name=g('name').value.trim(),email=g('email').value.trim(),"
+        "msg=g('message').value.trim(),updates=g('updates').checked?'Yes':'No';"
+        "var subject='Website message from '+name;"
+        "var body='Name: '+name+'\\nEmail: '+email+'\\nKeep in the loop: '+updates+'\\n\\n'+msg;"
+        "window.location.href='mailto:" + email + "?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);"
+        "document.getElementById('contact-status').textContent="
+        "'Opening your email app to send. If nothing happens, write to " + email + " directly.';});})();"
+    )
+    body = f"""
+<section class="page-head">
+  <p class="eyebrow">Contact</p>
+  <h1>Say hello.</h1>
+  <p class="hero-sub">This one is just me. If something here landed, or you'd like to work together, write to me directly. I read these.</p>
+</section>
+<section class="section contact-section">
+  <div class="contact-grid">
+    <form class="contact-box" id="contact-form">
+      <label>Your name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Your email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="updates" checked>
+        <span>Keep me in the loop with new essays and updates from The Inner Exodus.</span>
+      </label>
+      <button type="submit" class="btn btn-gold">Send message</button>
+      <p class="contact-note" id="contact-status">Your message opens in your own email app, addressed to me. Nothing is stored on this site.</p>
+    </form>
+    <aside class="contact-aside">
+      <div class="contact-card">
+        <h3>Rather just subscribe?</h3>
+        <p>The simplest way to keep in touch is The Inner Exodus. One or two essays a week, free.</p>
+        <a class="btn btn-ghost-dark" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe on Substack</a>
+      </div>
+      <div class="contact-card">
+        <h3>Work with me</h3>
+        <p>For clinical work, speaking, and booking, my main site has the details.</p>
+        <a class="btn btn-ghost-dark" href="{esc(SITE.get('main_site_url',''))}" target="_blank" rel="noopener">Visit my main site</a>
+      </div>
+      <div class="contact-card contact-card-bonus">
+        <h3>A bonus: my dissertation</h3>
+        <p>Exorcism, Deliverance, and Psychotherapy, from a Catholic-Christian perspective. Free to read.</p>
+        <a class="btn btn-ghost-dark" href="{esc(SITE.get('dissertation_url',''))}" target="_blank" rel="noopener">Read the PDF</a>
+      </div>
+    </aside>
+  </div>
+</section>
+<script>{js}</script>
+"""
+    write("contact/index.html", page("Contact · Dr. Sean Tobin", body, active="Contact", depth=1))
 
 
 def build_about():
@@ -500,15 +564,15 @@ def build_about():
   <p class="quote-attr">St. Irenaeus of Lyons</p>
 </section>
 <section class="cta-band">
-  <h2>Say hello.</h2>
-  <p>The best ways to reach Sean: subscribe and reply to any essay, or find him on Instagram.</p>
+  <h2>Get in touch.</h2>
+  <p>Write to Sean directly, subscribe to the essays, or find him on Instagram.</p>
   <div class="hero-ctas" style="justify-content:center">
-    <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe on Substack</a>
-    <a class="btn btn-ghost" href="{esc(SITE['socials']['Instagram'])}" target="_blank" rel="noopener">@drseantobin</a>
+    <a class="btn btn-gold" href="../contact/">Contact me</a>
+    <a class="btn btn-ghost-dark" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe on Substack</a>
   </div>
 </section>
 """
-    write("about/index.html", page("About — Dr. Sean Tobin", body, active="About", depth=1))
+    write("about/index.html", page("About · Dr. Sean Tobin", body, active="About", depth=1))
 
 
 def write(rel, content):
@@ -529,6 +593,7 @@ def main():
     build_podcast()
     build_music()
     build_about()
+    build_contact()
     (PUBLIC / ".nojekyll").write_text("")
     cname = ROOT / "CNAME"
     if cname.exists():

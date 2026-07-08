@@ -7,6 +7,9 @@
     "intro": "I'm a clinical psychologist and Catholic convert writing at the intersection of faith, psychology, and the age of AI. The Inner Exodus is the journey out.",
     "substack_url": "https://drseantobin.substack.com",
     "subscribe_url": "https://drseantobin.substack.com/subscribe",
+    "main_site_url": "https://www.drseantobin.ca/book-dr-tobin",
+    "contact_email": "seantobin.psyd@gmail.com",
+    "dissertation_url": "assets/exorcism-deliverance-psychotherapy-dissertation.pdf",
     "irenaeus": "The glory of God is man fully alive, and the life of man is the vision of God.",
     "socials": {
       "Substack": "https://drseantobin.substack.com",
@@ -25,20 +28,20 @@
   "about": {
     "bio": [
       "Sean Tobin is a clinical psychologist, a convert from atheism, and a charismatic Catholic. His work sits where the interior life meets the clinic: healing, worship, and teaching people how to stay human in an age built to scatter them.",
-      "He writes The Inner Exodus, a Substack read by tens of thousands at the intersection of faith, psychology, and artificial intelligence — about attention, desire, formation, and what machines can and cannot do to the soul.",
+      "He writes The Inner Exodus, a Substack read by tens of thousands at the intersection of faith, psychology, and artificial intelligence. He writes about attention, desire, formation, and what machines can and cannot do to the soul.",
       "He is the author of Big God, Little Devil and Remaining Human, leads worship, and speaks widely on psychology, deliverance, and the spiritual life."
     ],
     "pillars": [
-      {"name": "Healing", "text": "Clinical psychology in the light of grace — therapy, discernment, and the slow repair of the interior life."},
-      {"name": "Worship", "text": "Leading people into the presence of God through music — the posture the whole work flows from."},
-      {"name": "Teaching", "text": "Essays, books, and talks on faith, psychology, and the age of AI — formation for people who refuse to be automated."}
+      {"name": "Healing", "text": "Clinical psychology in the light of grace: therapy, discernment, and the slow repair of the interior life."},
+      {"name": "Worship", "text": "Leading people into the presence of God through music, the posture the whole work flows from."},
+      {"name": "Teaching", "text": "Essays, books, and talks on faith, psychology, and the age of AI. Formation for people who refuse to be automated."}
     ]
   },
   "books": [
     {
       "title": "Remaining Human",
       "subtitle": "A plain-language companion to Pope Leo XIV's encyclical on AI",
-      "description": "A readable guide to Magnifica Humanitas — what artificial intelligence is doing to attention, desire, and the soul, and how the Church calls us to remain fully human as the machines arrive.",
+      "description": "A readable guide to Magnifica Humanitas: what artificial intelligence is doing to attention, desire, and the soul, and how the Church calls us to remain fully human as the machines arrive.",
       "amazon_url": "https://www.amazon.com/dp/B0H7SJRZM5",
       "cover": "assets/covers/remaining-human.jpg",
       "formats": "Paperback · Kindle",
@@ -47,7 +50,7 @@
     {
       "title": "Big God, Little Devil",
       "subtitle": "A radical shift in the approach to spiritual warfare and deliverance",
-      "description": "A psychologist's book on the demonic that refuses both obsession and denial: the devil is real, and he is small. A book about getting the proportions right — and getting free.",
+      "description": "A psychologist's book on the demonic that refuses both obsession and denial: the devil is real, and he is small. A book about getting the proportions right, and getting free.",
       "amazon_url": "https://biggodlittledevil.com/",
       "cover": "assets/covers/big-god-little-devil.jpg",
       "formats": "Paperback · Kindle · Audiobook",
@@ -56,7 +59,7 @@
     {
       "title": "Sick Seven",
       "subtitle": "A children's story about anxiety and presence",
-      "description": "A picture book for kids about the worry that visits us all — and the quiet, steady presence that meets it. Gentle, funny, and true.",
+      "description": "A picture book for kids about the worry that visits us all, and the quiet, steady presence that meets it. Gentle, funny, and true.",
       "amazon_url": "https://www.amazon.com/dp/B0H7QSF7Y2",
       "cover": "assets/covers/sick-seven.jpg",
       "formats": "Paperback",
@@ -65,7 +68,7 @@
     {
       "title": "The Heart of Exorcism",
       "subtitle": "Faith, healing, and evangelization",
-      "description": "The follow-up to Big God, Little Devil: what deliverance is really for — not spectacle, but the healing and evangelization at the heart of the Church's ministry.",
+      "description": "The follow-up to Big God, Little Devil: what deliverance is really for. Not spectacle, but the healing and evangelization at the heart of the Church's ministry.",
       "amazon_url": "",
       "cover": "assets/covers/heart-of-exorcism.jpg",
       "formats": "Paperback",
@@ -74,14 +77,14 @@
     {
       "title": "Humanity in the Age of AI",
       "subtitle": "Staying human when the machines arrive",
-      "description": "A wide-angle look at what artificial intelligence is doing to human life — work, attention, relationship, and meaning — and how to stay fully human through the shift.",
+      "description": "A wide-angle look at what artificial intelligence is doing to human life: work, attention, relationship, and meaning, and how to stay fully human through the shift.",
       "amazon_url": "",
       "cover": "assets/covers/humanity.jpg",
       "formats": "Paperback · Kindle",
       "badge": "Coming soon"
     },
     {
-      "title": "Big God, Little Devil — Companion Workbook",
+      "title": "Big God, Little Devil Companion Workbook",
       "subtitle": "A guided workbook for the journey out of fear",
       "description": "The working companion to Big God, Little Devil: exercises, examinations, and prayer structures for actually walking free rather than just reading about it. Releasing later this month.",
       "amazon_url": "",
@@ -95,21 +98,21 @@
       "show": "The Lila Rose Show",
       "episode": "What Exorcists on YouTube Get Wrong",
       "date": "Jan 2025",
-      "blurb": "Episode 177 — mental health, the demonic, and where popular deliverance content goes off the rails.",
+      "blurb": "Episode 177. Mental health, the demonic, and where popular deliverance content goes off the rails.",
       "url": "https://podcasts.apple.com/us/podcast/e177-what-exorcists-on-youtube-get-wrong-w-dr-sean-tobin/id1460036160?i=1000682520292"
     },
     {
       "show": "The Lila Rose Show",
       "episode": "Inside Rome's Exorcist Conference: Are Demons Using AI?",
       "date": "2026",
-      "blurb": "From the Vatican's exorcism course — the demonic, discernment, and the strange new questions AI raises.",
+      "blurb": "From the Vatican's exorcism course: the demonic, discernment, and the strange new questions AI raises.",
       "url": "https://www.youtube.com/watch?v=uyW4jRPuyq8"
     },
     {
       "show": "The Exorcist Files",
       "episode": "Mental Health and the Demonic",
       "date": "Nov 2024",
-      "blurb": "Where clinical psychology ends and spiritual warfare begins — and why confusing the two harms people.",
+      "blurb": "Where clinical psychology ends and spiritual warfare begins, and why confusing the two harms people.",
       "url": "https://open.spotify.com/episode/55zB6Nho1m7Tudwt1GQpk3"
     },
     {
@@ -118,6 +121,13 @@
       "date": "2025",
       "blurb": "A return conversation on how deliverance and the mind actually fit together.",
       "url": "https://podcasts.apple.com/us/podcast/dr-sean-tobin-on-deliverance-spiritual-warfare-and/id1635371540?i=1000723018423"
+    },
+    {
+      "show": "The Normal Christian Life",
+      "episode": "Big God, Little Devil",
+      "date": "Season 2, Ep 21",
+      "blurb": "A wide conversation on Big God, Little Devil: fear, the demonic, and the God who is bigger than both.",
+      "url": "https://youtu.be/iJMX5tpua1c"
     },
     {
       "show": "Restore the Glory",
@@ -132,28 +142,28 @@
       "title": "Overshadow Me (Ruach)",
       "type": "Single · 2019",
       "year": "",
-      "blurb": "A prayer set to music — asking the Spirit to overshadow, the ruach of God.",
+      "blurb": "A prayer set to music, asking the Spirit to overshadow. The ruach of God.",
       "url": "https://open.spotify.com/track/6L3f40UWfcVyMxytvCwCKU"
     },
     {
       "title": "You Alone",
       "type": "Single · 2023",
       "year": "",
-      "blurb": "A song of surrender — you alone are enough.",
+      "blurb": "A song of surrender. You alone are enough.",
       "url": "https://open.spotify.com/track/0dn1Dd53XicCn3CHO4xI9D"
     },
     {
       "title": "Source and Summit (Acoustic)",
       "type": "Single · 2024 · the Eucharistic song",
       "year": "",
-      "blurb": "A song for the Eucharist — the source and summit of the Christian life.",
+      "blurb": "A song for the Eucharist, the source and summit of the Christian life.",
       "url": "https://open.spotify.com/artist/5xItxtf5J2WAGExoLEiPSE"
     },
     {
       "title": "Lord and Giver of Life",
       "type": "Encounter Worship (feat. Sean Tobin) · 2022",
       "year": "",
-      "blurb": "A charismatic worship single invoking the Holy Spirit — Lord and Giver of Life.",
+      "blurb": "A charismatic worship single invoking the Holy Spirit, Lord and Giver of Life.",
       "url": "https://open.spotify.com/track/47mhBdcKMJipFy3KmuVsrd"
     }
   ]
