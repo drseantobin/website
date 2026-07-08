@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Render flat book covers into realistic 3D book mockups (front + top + fore-edge
-pages), thickness proportional to page count. Trims baked-in white borders first.
+"""Render flat book covers into realistic 3/4-view 3D book mockups:
+perspective-turned front cover, thin receding fore-edge pages, soft ground
+shadow. Thickness scales with page count. Trims baked-in white borders first.
 Output: assets/covers/3d/<slug>.png (transparent)."""
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
@@ -20,12 +21,11 @@ BOOKS = {
     "heart-of-exorcism": 176,
 }
 
-FH = 1160          # front cover height in px
-PAD = 110          # canvas padding (room for shadow + top face)
+FH = 1180          # front cover height (px) before perspective
+PAD = 130          # canvas padding
 
 
 def trim_white(im, thresh=16):
-    """Crop uniform near-white border."""
     im = im.convert("RGB")
     bg = Image.new("RGB", im.size, (255, 255, 255))
     diff = ImageChops.difference(im, bg).convert("L").point(lambda p: 255 if p > thresh else 0)
@@ -37,87 +37,104 @@ def lerp(c1, c2, t):
     return tuple(round(a + (b - a) * t) for a, b in zip(c1, c2))
 
 
+def solve8(A, b):
+    n = 8
+    M = [A[i][:] + [b[i]] for i in range(n)]
+    for col in range(n):
+        piv = max(range(col, n), key=lambda r: abs(M[r][col]))
+        M[col], M[piv] = M[piv], M[col]
+        pv = M[col][col]
+        for j in range(col, n + 1):
+            M[col][j] /= pv
+        for r in range(n):
+            if r != col and M[r][col]:
+                f = M[r][col]
+                for j in range(col, n + 1):
+                    M[r][j] -= f * M[col][j]
+    return [M[i][n] for i in range(n)]
+
+
+def find_coeffs(dst, src):
+    """coeffs mapping OUTPUT quad `dst` back to INPUT points `src` for PIL."""
+    A, b = [], []
+    for (X, Y), (u, v) in zip(dst, src):
+        A.append([X, Y, 1, 0, 0, 0, -X * u, -Y * u]); b.append(u)
+        A.append([0, 0, 0, X, Y, 1, -X * v, -Y * v]); b.append(v)
+    return solve8(A, b)
+
+
 def render(slug, pages):
     src = SRC / f"{slug}.jpg"
     if not src.exists():
         print("  skip (no source):", slug); return
-    cover = trim_white(Image.open(src))
+    cover = trim_white(Image.open(src)).convert("RGBA")
     aspect = cover.width / cover.height
     fw = round(FH * aspect)
     cover = cover.resize((fw, FH), Image.LANCZOS)
 
-    # thickness (depth) in px, scaled by page count
-    d = max(16, min(70, round(pages * 0.24)))
-    dy = round(d * 0.52)                      # vertical skew of the extrusion (up-right)
+    # bake edge detail onto the flat cover so it follows the perspective
+    cd = ImageDraw.Draw(cover)
+    # left binding: soft dark gradient over ~7%
+    bw = max(8, round(fw * 0.07))
+    band = Image.new("L", (bw, 1), 0)
+    bl = band.load()
+    for x in range(bw):
+        bl[x, 0] = int(max(0, (1 - x / bw)) * 120)
+    band = band.resize((bw, FH))
+    dark = Image.new("RGBA", (bw, FH), (18, 14, 24, 255)); dark.putalpha(band)
+    cover.alpha_composite(dark, (0, 0))
+    # fore-edge crease at right + crisp border
+    cd.line([(fw - 2, 0), (fw - 2, FH)], fill=(120, 104, 78, 150), width=2)
+    cd.rectangle([0, 0, fw - 1, FH - 1], outline=(34, 27, 19, 170), width=2)
+    cd.line([(1, 0), (fw - 2, 0)], fill=(255, 255, 255, 55), width=1)
+
+    # ---- geometry (subtle 3/4 turn: right edge shorter & receding) ----
+    turn = round(FH * 0.045)
+    d = max(14, min(60, round(pages * 0.22)))     # page thickness
+    px, py = PAD, PAD
+    TL = (px, py)
+    TR = (px + fw, py + turn)
+    BR = (px + fw, py + FH - turn)
+    BL = (px, py + FH)
+    cover_quad = [TL, TR, BR, BL]
 
     W = PAD * 2 + fw + d
-    H = PAD * 2 + FH + dy
+    H = PAD * 2 + FH
     canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 
-    # front cover anchor
-    fx, fy = PAD, PAD + dy
-    FLt, FRt = (fx, fy), (fx + fw, fy)
-    FLb, FRb = (fx, fy + FH), (fx + fw, fy + FH)
+    # far corners of the fore-edge page block (recede up-right)
+    def rec(pt, k):
+        return (pt[0] + k, pt[1] - round(0.30 * k))
+    TR2, BR2 = rec(TR, d), rec(BR, d)
 
-    # ---- drop shadow (silhouette, blurred, offset down-right) ----
-    ox, oy = 18, 26
+    # ---- soft ground shadow ----
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    sd = ImageDraw.Draw(shadow)
-    sil = [FLt, (FLt[0] + d, FLt[1] - dy), (FRt[0] + d, FRt[1] - dy),
-           (FRb[0] + d, FRb[1] - dy), FRb, FLb]
-    sil = [(x + ox, y + oy) for (x, y) in sil]
-    sd.polygon(sil, fill=(18, 16, 40, 165))
-    shadow = shadow.filter(ImageFilter.GaussianBlur(28))
-    canvas.alpha_composite(shadow)
+    sil = [TL, TR, TR2, BR2, BR, BL]
+    sil = [(x + 6, y + 30) for (x, y) in sil]
+    ImageDraw.Draw(shadow).polygon(sil, fill=(20, 17, 34, 120))
+    canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(34)))
 
     draw = ImageDraw.Draw(canvas)
 
-    # ---- top face (page tops): horizontal stripes stepped along depth ----
-    top_a, top_b = (247, 241, 227), (232, 223, 205)
+    # ---- fore-edge pages (vertical stripes stepped along depth) ----
+    pa, pb = (240, 231, 213), (207, 195, 171)
     for k in range(d, -1, -1):
-        t = k / d
-        shade = 1 - 0.10 * t
-        col = lerp(top_a, top_b, (k % 6) / 6.0)
+        t = k / max(1, d)
+        shade = 1 - 0.20 * t
+        col = lerp(pa, pb, (k % 5) / 5.0)
         col = tuple(round(c * shade) for c in col)
-        y_off = round(dy * t)
-        draw.line([(FLt[0] + k, FLt[1] - y_off), (FRt[0] + k, FRt[1] - y_off)], fill=col + (255,))
+        a = rec(TR, k); b2 = rec(BR, k)
+        draw.line([a, b2], fill=col + (255,), width=1)
+    # seam line where pages meet the cover
+    draw.line([TR, BR], fill=(90, 78, 58, 160), width=1)
 
-    # ---- right fore-edge (pages): vertical stripes stepped along depth ----
-    re_a, re_b = (238, 229, 211), (214, 203, 180)
-    for k in range(d, -1, -1):
-        t = k / d
-        shade = 1 - 0.16 * t
-        col = lerp(re_a, re_b, (k % 5) / 5.0)
-        col = tuple(round(c * shade) for c in col)
-        y_off = round(dy * t)
-        draw.line([(FRt[0] + k, FRt[1] - y_off), (FRb[0] + k, FRb[1] - y_off)], fill=col + (255,))
-
-    # ---- front cover ----
-    canvas.paste(cover, (fx, fy))
-
-    # binding shadow (left) + fore-edge contact shadow (right) on the cover
-    grad = Image.new("L", (fw, 1), 0)
-    gp = grad.load()
-    for x in range(fw):
-        left = max(0, 1 - x / (fw * 0.06)) * 90        # dark spine gradient
-        right = max(0, 1 - (fw - 1 - x) / (fw * 0.02)) * 60
-        gp[x, 0] = int(min(120, left + right))
-    shade_col = grad.resize((fw, FH))
-    dark = Image.new("RGBA", (fw, FH), (20, 16, 30, 255))
-    dark.putalpha(shade_col)
-    canvas.alpha_composite(dark, (fx, fy))
-
-    # fore-edge crease so pages read as separate from a light/white cover
-    draw.line([FRt, FRb], fill=(120, 104, 78, 150), width=2)
-    # crisp edge around the front cover
-    draw.rectangle([FLt, FRb], outline=(35, 28, 20, 100), width=1)
-    # bound spine hint at the far left
-    draw.line([FLt, FLb], fill=(0, 0, 0, 55), width=2)
-    # thin highlight along the very top edge of the cover
-    draw.line([FLt, FRt], fill=(255, 255, 255, 45), width=1)
+    # ---- perspective-warped front cover ----
+    coeffs = find_coeffs(cover_quad, [(0, 0), (fw, 0), (fw, FH), (0, FH)])
+    warped = cover.transform((W, H), Image.PERSPECTIVE, coeffs, resample=Image.BICUBIC)
+    canvas.alpha_composite(warped)
 
     canvas.save(OUT / f"{slug}.png")
-    print(f"  {slug:22} pages={pages:<4} depth={d}px  {cover.width}x{cover.height} front")
+    print(f"  {slug:22} pages={pages:<4} depth={d}px  front {fw}x{FH}")
 
 
 if __name__ == "__main__":
