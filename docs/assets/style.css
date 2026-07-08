@@ -221,19 +221,52 @@ a:focus-visible, button:focus-visible {
 }
 .book-card {
   display: flex; flex-direction: column;
-  background: #fffdf7; border: 1px solid var(--rule); border-radius: 3px;
+  background: #fffdf7; border: 1px solid var(--rule); border-radius: 6px;
   overflow: hidden; text-decoration: none;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-a.book-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(29, 37, 52, 0.1); }
-.book-cover { display: block; width: 100%; aspect-ratio: 0.82; object-fit: contain; background: #ffffff; }
+a.book-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(29, 37, 52, 0.12); }
+/* uniform 3D "physical book" stage */
+.book-stage {
+  padding: 2.4rem 2rem 2rem;
+  background: linear-gradient(168deg, #f4eddd 0%, #e8dfca 100%);
+  display: flex; justify-content: center; align-items: flex-end;
+  perspective: 1200px;
+}
+.book3d { width: 62%; max-width: 12rem; }
+.book3d-inner {
+  position: relative; width: 100%; aspect-ratio: 0.66;
+  transform: rotateY(-16deg); transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+a.book-card:hover .book3d-inner { transform: rotateY(-6deg); }
+.book-cover, .book-cover-type {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; border-radius: 2px 5px 5px 2px;
+  box-shadow: 15px 20px 30px -14px rgba(24, 21, 52, 0.55);
+}
+/* binding shadow + gloss down the spine (left edge) */
+.book3d-inner::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  border-radius: 2px 5px 5px 2px;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.10) 3%,
+    rgba(255,255,255,0.22) 6%, rgba(255,255,255,0) 12%);
+}
+/* page thickness on the fore-edge (right) */
+.book3d-inner::after {
+  content: ""; position: absolute; top: 1.5%; height: 97%; right: 1px; width: 9px; z-index: 1;
+  transform: translateX(8px) rotateY(70deg); transform-origin: left center;
+  background: repeating-linear-gradient(90deg, #f5f0e5 0 1.2px, #d6cbb4 1.2px 2.4px);
+  border-radius: 0 2px 2px 0;
+}
 .book-cover-type {
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(165deg, var(--night), var(--night-deep));
-  padding: 2rem;
+  padding: 1.4rem; object-fit: unset;
 }
 .book-cover-type span {
-  font-family: var(--display); font-weight: 600; font-size: 1.6rem;
+  font-family: var(--display); font-weight: 600; font-size: 1.3rem;
   color: var(--gold-bright); text-align: center; line-height: 1.2;
 }
 .listen-more { font-size: 0.88rem; color: var(--gold); font-weight: 500; }
