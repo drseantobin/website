@@ -424,9 +424,40 @@ a.book-card:hover .book3d-inner { transform: rotateY(-6deg); }
 }
 .footer-name { font-family: var(--display); font-weight: 600; font-size: 1.3rem; }
 .footer-roles { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(251,247,238,0.5); margin-top: 0.3rem; }
-.footer-links { display: flex; gap: 1.3rem; margin-left: auto; flex-wrap: wrap; }
-.footer-links a { color: rgba(251,247,238,0.75); text-decoration: none; font-size: 0.88rem; }
-.footer-links a:hover { color: var(--gold-bright); }
+.footer-links { display: flex; gap: 0.7rem; margin-left: auto; flex-wrap: wrap; }
+.footer-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.3rem; height: 2.3rem; border-radius: 50%;
+  color: rgba(251,247,238,0.72);
+  border: 1px solid rgba(251,247,238,0.16);
+  transition: color 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+.footer-links a:hover { color: var(--night); background: var(--gold-bright); border-color: var(--gold-bright); }
+.soc-svg { display: block; }
+
+/* ---------- connect / social tiles ---------- */
+.connect-section { border-top: 1px solid var(--rule); padding-top: 3rem; }
+.connect-head { text-align: center; max-width: 40rem; margin: 0 auto 2rem; }
+.connect-head h2 { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 600; margin: 0.3rem 0 0.6rem; }
+.social-tiles {
+  display: grid; gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.social-tile {
+  display: flex; align-items: center; gap: 0.9rem;
+  padding: 0.95rem 1.1rem; text-decoration: none;
+  background: #fffdf7; border: 1px solid var(--rule); border-radius: 8px;
+  color: var(--ink); transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+.social-tile:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(29,37,52,0.1); border-color: var(--gold); }
+.social-ico {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 2.7rem; height: 2.7rem; border-radius: 50%;
+  background: linear-gradient(160deg, var(--night), var(--night-deep)); color: var(--gold-bright);
+}
+.social-tx { display: flex; flex-direction: column; line-height: 1.25; }
+.social-tx b { font-weight: 600; font-size: 0.98rem; }
+.social-tx em { font-style: normal; font-size: 0.85rem; color: var(--muted); }
 .footer-note { width: 100%; font-size: 0.82rem; color: rgba(251,247,238,0.45); }
 .footer-note a { color: rgba(251,247,238,0.65); }
 

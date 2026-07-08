@@ -131,6 +131,44 @@ def fmt_date(iso):
     return f"{months[int(m)]} {int(d)}, {y}"
 
 
+SOCIAL_ICONS = {
+    "Instagram": '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>',
+    "YouTube": '<rect x="2.5" y="6" width="19" height="12" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.2 9.3l4.8 2.7-4.8 2.7z" fill="currentColor"/>',
+    "Facebook": '<path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.2-1.3 1.4-1.3h1.4V5.6c-.7-.1-1.5-.15-2.3-.15-2.3 0-3.8 1.4-3.8 3.9v2.05H7.9V14h2.3v7z" fill="currentColor"/>',
+    "LinkedIn": '<rect x="3" y="3" width="18" height="18" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 10.4v5.6M7 7.4v.02M11 16v-3.1c0-1 .8-1.7 1.75-1.7s1.75.7 1.75 1.7V16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    "Substack": '<path d="M5 5h14v2.3H5zM5 9.4h14v2.3H5zM5 13.8l7 3.2 7-3.2V20l-7-3.2L5 20z" fill="currentColor"/>',
+    "Spotify": '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.4c2.6-.6 5.2-.3 7.3.9M8.4 13.1c2.1-.4 4-.2 5.6.7M8.9 15.5c1.5-.3 2.9-.1 4 .5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+    "X": '<path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    "TikTok": '<path d="M13.8 4c.35 2 1.7 3.4 3.7 3.6v2.4c-1.3 0-2.6-.4-3.7-1.1v5.4a4.3 4.3 0 1 1-3.8-4.27v2.36a1.95 1.95 0 1 0 1.45 1.88V4z" fill="currentColor"/>',
+}
+SOCIAL_HANDLES = {
+    "Instagram": "@drseantobin", "Facebook": "Dr. Sean Tobin", "YouTube": "@drseantobin",
+    "LinkedIn": "Sean Tobin, PsyD", "X": "@drseantobin", "TikTok": "@seantobinofficial",
+    "Spotify": "Sean Tobin", "Substack": "The Inner Exodus",
+}
+SOCIAL_ORDER = ["Instagram", "YouTube", "Facebook", "LinkedIn", "Substack", "Spotify", "X", "TikTok"]
+
+
+def social_icon(name):
+    paths = SOCIAL_ICONS.get(name, '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>')
+    return f'<svg class="soc-svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">{paths}</svg>'
+
+
+def social_tiles():
+    tiles = []
+    for name in SOCIAL_ORDER:
+        url = SITE["socials"].get(name)
+        if not url:
+            continue
+        handle = SOCIAL_HANDLES.get(name, "")
+        tiles.append(
+            f'<a class="social-tile" href="{esc(url)}" target="_blank" rel="noopener" aria-label="{name}">'
+            f'<span class="social-ico">{social_icon(name)}</span>'
+            f'<span class="social-tx"><b>{name}</b><em>{esc(handle)}</em></span></a>'
+        )
+    return '<div class="social-tiles">' + "".join(tiles) + "</div>"
+
+
 def page(title, body, *, active="", depth=0, description=""):
     r = "../" * depth
     nav_items = [("Writing", "writing/"), ("Books", "books/"), ("Podcast", "podcast/"),
@@ -139,9 +177,11 @@ def page(title, body, *, active="", depth=0, description=""):
         f'<a href="{r}{href}" class="{"active" if active == label else ""}">{label}</a>'
         for label, href in nav_items
     )
+    _ordered = [n for n in SOCIAL_ORDER if SITE["socials"].get(n)]
+    _ordered += [n for n in SITE["socials"] if n not in SOCIAL_ORDER and SITE["socials"].get(n)]
     socials = "".join(
-        f'<a href="{esc(url)}" target="_blank" rel="noopener">{name}</a>'
-        for name, url in SITE["socials"].items() if url
+        f'<a href="{esc(SITE["socials"][name])}" target="_blank" rel="noopener" aria-label="{name}" title="{name}">{social_icon(name)}</a>'
+        for name in _ordered
     )
     desc = esc(description or SITE["intro"])
     return f"""<!DOCTYPE html>
@@ -541,6 +581,14 @@ def build_contact():
       </div>
     </aside>
   </div>
+</section>
+<section class="section connect-section">
+  <div class="connect-head">
+    <p class="eyebrow">Elsewhere</p>
+    <h2>Find me on your feed.</h2>
+    <p class="hero-sub">I'm most active on Instagram and YouTube. Follow wherever you already spend your time.</p>
+  </div>
+  {social_tiles()}
 </section>
 <script>{js}</script>
 """
