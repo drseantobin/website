@@ -220,23 +220,19 @@ a:focus-visible, button:focus-visible {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 .book-card {
-  display: flex; flex-direction: column;
-  background: #fffdf7; border: 1px solid var(--rule); border-radius: 6px;
-  overflow: hidden; text-decoration: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex; flex-direction: column; text-align: center;
+  text-decoration: none; background: none; border: 0;
 }
-a.book-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(29, 37, 52, 0.12); }
-/* pre-rendered 3D book on a soft stage */
+/* pre-rendered 3D book stands alone on the page — no panel behind it */
 .book-stage {
-  padding: 2.2rem 1.6rem 1.8rem;
-  background: linear-gradient(168deg, #f4eddd 0%, #e8dfca 100%);
+  padding: 0.5rem 1rem 1.4rem;
   display: flex; justify-content: center; align-items: flex-end;
 }
 .book-3d {
-  display: block; width: 78%; max-width: 13rem; height: auto;
+  display: block; width: 82%; max-width: 14rem; height: auto;
   transition: transform 0.3s ease;
 }
-a.book-card:hover .book-3d { transform: translateY(-5px) scale(1.02); }
+a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
 .book-cover-type {
   display: flex; align-items: center; justify-content: center;
   width: 62%; aspect-ratio: 0.64; border-radius: 2px 4px 4px 2px;

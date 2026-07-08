@@ -48,7 +48,7 @@ def render(slug, pages):
 
     # thickness (depth) in px, scaled by page count
     d = max(16, min(70, round(pages * 0.24)))
-    dy = round(d * 0.58)                      # vertical skew of the extrusion (up-right)
+    dy = round(d * 0.52)                      # vertical skew of the extrusion (up-right)
 
     W = PAD * 2 + fw + d
     H = PAD * 2 + FH + dy
@@ -60,14 +60,14 @@ def render(slug, pages):
     FLb, FRb = (fx, fy + FH), (fx + fw, fy + FH)
 
     # ---- drop shadow (silhouette, blurred, offset down-right) ----
-    ox, oy = 16, 22
+    ox, oy = 18, 26
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow)
     sil = [FLt, (FLt[0] + d, FLt[1] - dy), (FRt[0] + d, FRt[1] - dy),
            (FRb[0] + d, FRb[1] - dy), FRb, FLb]
     sil = [(x + ox, y + oy) for (x, y) in sil]
-    sd.polygon(sil, fill=(18, 16, 40, 150))
-    shadow = shadow.filter(ImageFilter.GaussianBlur(26))
+    sd.polygon(sil, fill=(18, 16, 40, 165))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(28))
     canvas.alpha_composite(shadow)
 
     draw = ImageDraw.Draw(canvas)
@@ -107,10 +107,14 @@ def render(slug, pages):
     dark.putalpha(shade_col)
     canvas.alpha_composite(dark, (fx, fy))
 
+    # fore-edge crease so pages read as separate from a light/white cover
+    draw.line([FRt, FRb], fill=(120, 104, 78, 150), width=2)
     # crisp edge around the front cover
-    draw.rectangle([FLt, FRb], outline=(0, 0, 0, 60), width=1)
+    draw.rectangle([FLt, FRb], outline=(35, 28, 20, 100), width=1)
+    # bound spine hint at the far left
+    draw.line([FLt, FLb], fill=(0, 0, 0, 55), width=2)
     # thin highlight along the very top edge of the cover
-    draw.line([FLt, FRt], fill=(255, 255, 255, 40), width=1)
+    draw.line([FLt, FRt], fill=(255, 255, 255, 45), width=1)
 
     canvas.save(OUT / f"{slug}.png")
     print(f"  {slug:22} pages={pages:<4} depth={d}px  {cover.width}x{cover.height} front")
