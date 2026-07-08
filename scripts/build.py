@@ -532,6 +532,7 @@ def build_music():
 
 
 def build_contact():
+    r = "../"
     email = SITE.get("contact_email", "")
     js = (
         "(function(){var f=document.getElementById('contact-form');if(!f)return;"
@@ -546,10 +547,13 @@ def build_contact():
         "'Opening your email app to send. If nothing happens, write to " + email + " directly.';});})();"
     )
     body = f"""
-<section class="page-head">
-  <p class="eyebrow">Contact</p>
-  <h1>Say hello.</h1>
-  <p class="hero-sub">This one is just me. If something here landed, or you'd like to work together, write to me directly. I read these.</p>
+<section class="page-head contact-head">
+  <img class="contact-portrait" src="{r}assets/sean-portrait.jpg" alt="Dr. Sean Tobin" width="190" height="190">
+  <div class="contact-head-tx">
+    <p class="eyebrow">Contact</p>
+    <h1>Say hello.</h1>
+    <p class="hero-sub">This one is just me. If something here landed, or you'd like to work together, write to me directly. I read these.</p>
+  </div>
 </section>
 <section class="section contact-section">
   <div class="contact-grid">
@@ -584,7 +588,7 @@ def build_contact():
       <div class="contact-card contact-card-bonus">
         <h3>A bonus: my dissertation</h3>
         <p>Exorcism, Deliverance, and Psychotherapy, from a Catholic-Christian perspective. Free to read.</p>
-        <a class="btn btn-ghost-dark" href="{esc(SITE.get('dissertation_url',''))}" target="_blank" rel="noopener">Read the PDF</a>
+        <a class="btn btn-ghost-dark" href="{r}{esc(SITE.get('dissertation_url',''))}" target="_blank" rel="noopener">Read the PDF</a>
       </div>
     </aside>
   </div>
