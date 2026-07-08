@@ -453,8 +453,8 @@ a.book-card:hover .book3d-inner { transform: rotateY(-6deg); }
 .social-ico {
   flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
   width: 2.7rem; height: 2.7rem; border-radius: 50%;
-  background: linear-gradient(160deg, var(--night), var(--night-deep)); color: var(--gold-bright);
 }
+.social-ico .soc-svg { width: 20px; height: 20px; }
 .social-tx { display: flex; flex-direction: column; line-height: 1.25; }
 .social-tx b { font-weight: 600; font-size: 0.98rem; }
 .social-tx em { font-style: normal; font-size: 0.85rem; color: var(--muted); }
