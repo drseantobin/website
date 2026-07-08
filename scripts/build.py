@@ -21,6 +21,14 @@ DATA = json.loads((CONTENT / "site_data.json").read_text())
 SITE = DATA["site"]
 INDEX = json.loads((CONTENT / "posts_index.json").read_text())
 
+_cat_file = CONTENT / "categories.json"
+if _cat_file.exists():
+    _cat_data = json.loads(_cat_file.read_text())
+    CATS = _cat_data.get("assignments", {})
+    CATEGORY_LIST = _cat_data.get("categories", [])
+else:
+    CATS, CATEGORY_LIST = {}, []
+
 VOID = {"img", "br", "hr", "source", "meta", "link", "input", "wbr", "embed", "area", "col", "track"}
 
 # Substack chrome that must not appear on the site
@@ -175,12 +183,16 @@ def post_card(p, depth):
     badge = '<span class="badge badge-paid">Subscribers</span>' if p["paid"] else ""
     img = f'<div class="card-img" style="background-image:url(\'{esc(p["cover_image"])}\')"></div>' if p["cover_image"] else '<div class="card-img card-img-empty"></div>'
     sub = esc(p["subtitle"] or p["description"] or "")
-    return f"""<a class="post-card" href="{r}writing/{esc(p['slug'])}/">
+    cat = CATS.get(p["slug"], "")
+    blob = esc((p["title"] + " " + (p.get("subtitle") or "") + " " + (p.get("description") or "")).lower())
+    chip = f'<span class="cat-chip">{esc(cat)}</span>' if cat else ""
+    return f"""<a class="post-card" data-cat="{esc(cat)}" data-search="{blob}" href="{r}writing/{esc(p['slug'])}/">
   {img}
   <div class="card-body">
     <p class="card-date">{fmt_date(p['date'])} {badge}</p>
     <h3>{esc(p['title'])}</h3>
     <p class="card-sub">{sub}</p>
+    {chip}
   </div>
 </a>"""
 
@@ -188,7 +200,7 @@ def post_card(p, depth):
 def build_home():
     latest = [p for p in INDEX if p.get("type", "newsletter") == "newsletter"][:3]
     cards = "".join(post_card(p, 0) for p in latest)
-    books = "".join(book_card(b) for b in DATA["books"][:3])
+    books = "".join(book_card(b, 0) for b in DATA["books"][:3])
     pillars = "".join(
         f'<div class="pillar"><h3>{esc(pl["name"])}</h3><p>{esc(pl["text"])}</p></div>'
         for pl in DATA["about"]["pillars"]
@@ -255,14 +267,15 @@ def build_home():
     write("index.html", page(f"Dr. Sean Tobin — {SITE['tagline']}", body, active="", depth=0))
 
 
-def book_card(b):
+def book_card(b, depth=0):
+    r = "../" * depth
     link_open = f'<a class="book-card" href="{esc(b["amazon_url"])}" target="_blank" rel="noopener">' if b["amazon_url"] else '<div class="book-card">'
     link_close = "</a>" if b["amazon_url"] else "</div>"
     badge = f'<span class="badge badge-gold">{esc(b["badge"])}</span>' if b.get("badge") else ""
     cover = b.get("cover", "")
-    cover_el = (f'<div class="book-cover" style="background-image:url(\'{esc(cover)}\')"></div>'
+    cover_el = (f'<div class="book-cover" style="background-image:url(\'{r}{esc(cover)}\')"></div>'
                 if cover else f'<div class="book-cover book-cover-type"><span>{esc(b["title"])}</span></div>')
-    cta = '<span class="listen-more">Buy on Amazon →</span>' if b["amazon_url"] else '<span class="card-date">Details coming soon</span>'
+    cta = '<span class="listen-more">Buy on Amazon →</span>' if b["amazon_url"] else '<span class="card-date">Coming soon</span>'
     return f"""{link_open}
   {cover_el}
   <div class="card-body">
@@ -274,24 +287,86 @@ def book_card(b):
 {link_close}"""
 
 
+WRITING_JS = r"""
+(function(){
+  var grid=document.getElementById('essay-grid');
+  var cards=Array.prototype.slice.call(grid.querySelectorAll('.post-card'));
+  var search=document.getElementById('essay-search');
+  var pills=document.getElementById('cat-pills');
+  var noResults=document.getElementById('no-results');
+  var activeCat='all';
+  function apply(){
+    var q=search.value.trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var okCat=activeCat==='all'||c.getAttribute('data-cat')===activeCat;
+      var hay=c.getAttribute('data-search')+' '+c.getAttribute('data-cat').toLowerCase();
+      var okQ=!q||hay.indexOf(q)>-1;
+      var show=okCat&&okQ;
+      c.style.display=show?'':'none';
+      if(show)shown++;
+    });
+    noResults.hidden=shown>0;
+  }
+  search.addEventListener('input',apply);
+  pills.addEventListener('click',function(e){
+    var b=e.target.closest('.cat-pill'); if(!b)return;
+    activeCat=b.getAttribute('data-cat');
+    pills.querySelectorAll('.cat-pill').forEach(function(p){p.classList.toggle('active',p===b);});
+    apply();
+  });
+  function setView(v){
+    grid.classList.toggle('view-grid',v==='grid');
+    grid.classList.toggle('view-list',v==='list');
+    document.querySelectorAll('.view-toggle button').forEach(function(x){
+      x.classList.toggle('active',x.getAttribute('data-view')===v);
+    });
+    try{localStorage.setItem('essayView',v);}catch(e){}
+  }
+  document.querySelectorAll('.view-toggle button').forEach(function(btn){
+    btn.addEventListener('click',function(){setView(btn.getAttribute('data-view'));});
+  });
+  try{var v=localStorage.getItem('essayView'); if(v)setView(v);}catch(e){}
+})();
+"""
+
+
 def build_writing_index():
-    by_year = {}
-    for p in INDEX:
-        by_year.setdefault(p["date"][:4], []).append(p)
-    sections = ""
-    for year in sorted(by_year, reverse=True):
-        rows = "".join(post_card(p, 1) for p in by_year[year])
-        sections += f'<h2 class="year-mark">{year}</h2><div class="card-grid card-grid-list">{rows}</div>'
+    posts = sorted(INDEX, key=lambda p: p["date"], reverse=True)
+    cards = "".join(post_card(p, 1) for p in posts)
     n_free = sum(1 for p in INDEX if not p["paid"])
+    counts = {}
+    for p in INDEX:
+        c = CATS.get(p["slug"], "")
+        if c:
+            counts[c] = counts.get(c, 0) + 1
+    pills = f'<button class="cat-pill active" data-cat="all">All <span>{len(posts)}</span></button>'
+    for c in CATEGORY_LIST:
+        if counts.get(c):
+            pills += f'<button class="cat-pill" data-cat="{esc(c)}">{esc(c)} <span>{counts[c]}</span></button>'
     body = f"""
 <section class="page-head">
   <p class="eyebrow">The Inner Exodus</p>
   <h1>Writing</h1>
   <p class="hero-sub">{len(INDEX)} essays on faith, psychology, and the age of AI. {n_free} are free to read here in full;
-  essays marked <span class="badge badge-paid">Subscribers</span> are for subscribers of
+  essays marked <span class="badge badge-paid">Subscribers</span> continue on
   <a href="{esc(SITE['substack_url'])}" target="_blank" rel="noopener">The Inner Exodus</a>.</p>
 </section>
-<section class="section">{sections}</section>
+<section class="section writing-section">
+  <div class="writing-controls">
+    <div class="search-wrap">
+      <input type="search" id="essay-search" placeholder="Search essays…" autocomplete="off" aria-label="Search essays">
+    </div>
+    <div class="view-toggle" role="group" aria-label="Choose a view">
+      <button type="button" data-view="list" class="active" aria-label="List view" title="List view">&#9776;</button>
+      <button type="button" data-view="grid" aria-label="Grid view" title="Grid view">&#9638;</button>
+    </div>
+  </div>
+  <div class="cat-pills" id="cat-pills">{pills}</div>
+  <div id="essay-grid" class="card-grid view-list">{cards}</div>
+  <p id="no-results" class="empty-note" hidden>No essays match your search.</p>
+</section>
+<script>{WRITING_JS}</script>
 """
     write("writing/index.html", page("Writing — Dr. Sean Tobin", body, active="Writing", depth=1))
 
@@ -344,7 +419,7 @@ def build_posts():
 
 
 def build_books():
-    cards = "".join(book_card(b) for b in DATA["books"])
+    cards = "".join(book_card(b, 1) for b in DATA["books"])
     body = f"""
 <section class="page-head">
   <p class="eyebrow">Books</p>
@@ -379,9 +454,17 @@ def build_podcast():
 
 def build_music():
     tracks = DATA["music"]
+    links = SITE.get("music_links", {})
+    btns = "".join(
+        f'<a class="btn btn-ghost-dark" href="{esc(u)}" target="_blank" rel="noopener">{esc(n)} →</a>'
+        for n, u in links.items() if u
+    )
+    linkbar = f'<div class="music-links">{btns}</div>' if btns else ""
     if tracks:
+        def meta_line(t):
+            return " · ".join(x for x in (t.get('type', ''), t.get('year', '')) if x)
         items = "".join(f"""<a class="ep-row" href="{esc(t['url'])}" target="_blank" rel="noopener">
-  <div><p class="card-date">{esc(t.get('type',''))} · {esc(t.get('year',''))}</p>
+  <div><p class="card-date">{esc(meta_line(t))}</p>
   <h3>{esc(t['title'])}</h3><p class="card-sub">{esc(t.get('blurb',''))}</p></div>
   <span class="listen-more">Listen →</span></a>""" for t in tracks)
         listing = f'<div class="ep-list">{items}</div>'
@@ -391,7 +474,8 @@ def build_music():
 <section class="page-head">
   <p class="eyebrow">Music</p>
   <h1>Worship</h1>
-  <p class="hero-sub">Sean leads worship — the posture the rest of the work flows from.</p>
+  <p class="hero-sub">Sean leads worship — the posture the rest of the work flows from. Hear the full catalogue on Spotify and Apple Music.</p>
+  {linkbar}
 </section>
 <section class="section">{listing}</section>
 """

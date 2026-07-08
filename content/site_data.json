@@ -12,9 +12,14 @@
       "Substack": "https://drseantobin.substack.com",
       "Instagram": "https://www.instagram.com/drseantobin",
       "YouTube": "https://www.youtube.com/@drseantobin",
+      "Spotify": "https://open.spotify.com/artist/5xItxtf5J2WAGExoLEiPSE",
       "Facebook": "https://www.facebook.com/drseantobin",
       "X": "https://x.com/drseantobin",
       "TikTok": "https://www.tiktok.com/@seantobinofficial"
+    },
+    "music_links": {
+      "Spotify": "https://open.spotify.com/artist/5xItxtf5J2WAGExoLEiPSE",
+      "Apple Music": "https://music.apple.com/us/artist/sean-tobin/1486337050"
     }
   },
   "about": {
@@ -32,9 +37,10 @@
   "books": [
     {
       "title": "Remaining Human",
-      "subtitle": "Staying fully alive in the age of AI",
-      "description": "What artificial intelligence can do, what it cannot, and what it is quietly doing to attention, desire, and the soul — and how to remain fully human as the machines arrive.",
+      "subtitle": "A plain-language companion to Pope Leo XIV's encyclical on AI",
+      "description": "A readable guide to Magnifica Humanitas — what artificial intelligence is doing to attention, desire, and the soul, and how the Church calls us to remain fully human as the machines arrive.",
       "amazon_url": "https://www.amazon.com/dp/B0H7SJRZM5",
+      "cover": "assets/covers/remaining-human.jpg",
       "formats": "Paperback · Kindle",
       "badge": "New"
     },
@@ -43,6 +49,7 @@
       "subtitle": "A radical shift in the approach to spiritual warfare and deliverance",
       "description": "A psychologist's book on the demonic that refuses both obsession and denial: the devil is real, and he is small. A book about getting the proportions right — and getting free.",
       "amazon_url": "https://biggodlittledevil.com/",
+      "cover": "assets/covers/big-god-little-devil.jpg",
       "formats": "Paperback · Kindle · Audiobook",
       "badge": ""
     },
@@ -51,6 +58,7 @@
       "subtitle": "A guided workbook for the journey out of fear",
       "description": "The working companion to Big God, Little Devil: exercises, examinations, and prayer structures for actually walking free rather than just reading about it. Releasing later this month.",
       "amazon_url": "",
+      "cover": "assets/covers/workbook.jpg",
       "formats": "Paperback · $14.99",
       "badge": "Coming soon"
     },
@@ -59,6 +67,7 @@
       "subtitle": "A children's story about anxiety and presence",
       "description": "A picture book for kids about the worry that visits us all — and the quiet, steady presence that meets it. Gentle, funny, and true.",
       "amazon_url": "https://www.amazon.com/dp/B0H7QSF7Y2",
+      "cover": "assets/covers/sick-seven.jpg",
       "formats": "Paperback",
       "badge": ""
     }
@@ -72,6 +81,13 @@
       "url": "https://podcasts.apple.com/us/podcast/e177-what-exorcists-on-youtube-get-wrong-w-dr-sean-tobin/id1460036160?i=1000682520292"
     },
     {
+      "show": "The Lila Rose Show",
+      "episode": "Inside Rome's Exorcist Conference: Are Demons Using AI?",
+      "date": "2026",
+      "blurb": "From the Vatican's exorcism course — the demonic, discernment, and the strange new questions AI raises.",
+      "url": "https://www.youtube.com/watch?v=uyW4jRPuyq8"
+    },
+    {
       "show": "The Exorcist Files",
       "episode": "Mental Health and the Demonic",
       "date": "Nov 2024",
@@ -79,34 +95,48 @@
       "url": "https://open.spotify.com/episode/55zB6Nho1m7Tudwt1GQpk3"
     },
     {
-      "show": "Restore the Glory",
-      "episode": "Deliverance and Healing (Part 2)",
-      "date": "Episode 146",
-      "blurb": "The second half of a conversation on deliverance, inner healing, and the psychology beneath both.",
-      "url": "https://open.spotify.com/episode/0tTS9hTpQeT7eV7ULn5xKM"
+      "show": "The Exorcist Files",
+      "episode": "Deliverance, Spiritual Warfare, and Psychology",
+      "date": "2025",
+      "blurb": "A return conversation on how deliverance and the mind actually fit together.",
+      "url": "https://podcasts.apple.com/us/podcast/dr-sean-tobin-on-deliverance-spiritual-warfare-and/id1635371540?i=1000723018423"
     },
     {
-      "show": "Ecstatic Integration",
-      "episode": "Demons, Parts Work, and Psychedelics",
-      "date": "",
-      "blurb": "A Catholic clinician's view on the demonic, internal-family-systems parts work, and the psychedelic turn.",
-      "url": "https://www.ecstaticintegration.org/p/catholic-exorcism-expert-on-demons"
+      "show": "Restore the Glory",
+      "episode": "Deliverance and Healing",
+      "date": "Episode 146",
+      "blurb": "Deliverance, inner healing, and the psychology beneath both.",
+      "url": "https://open.spotify.com/episode/0tTS9hTpQeT7eV7ULn5xKM"
     }
   ],
   "music": [
     {
-      "title": "Lord and Giver of Life",
-      "type": "Single · Encounter Worship (feat. Sean Tobin)",
-      "year": "2022",
-      "blurb": "A charismatic worship single invoking the Holy Spirit — Lord and Giver of Life.",
-      "url": "https://music.apple.com/au/album/lord-and-giver-of-life-feat-sean-tobin-single/1657097891"
-    },
-    {
       "title": "Overshadow Me (Ruach)",
-      "type": "Sean Tobin Band",
+      "type": "Single · 2019",
       "year": "",
       "blurb": "A prayer set to music — asking the Spirit to overshadow, the ruach of God.",
-      "url": "https://seantobinband.wordpress.com/overshadow-me-ruach/"
+      "url": "https://open.spotify.com/track/6L3f40UWfcVyMxytvCwCKU"
+    },
+    {
+      "title": "You Alone",
+      "type": "Single · 2023",
+      "year": "",
+      "blurb": "A song of surrender — you alone are enough.",
+      "url": "https://open.spotify.com/track/0dn1Dd53XicCn3CHO4xI9D"
+    },
+    {
+      "title": "Source and Summit (Acoustic)",
+      "type": "Single · 2024 · the Eucharistic song",
+      "year": "",
+      "blurb": "A song for the Eucharist — the source and summit of the Christian life.",
+      "url": "https://open.spotify.com/artist/5xItxtf5J2WAGExoLEiPSE"
+    },
+    {
+      "title": "Lord and Giver of Life",
+      "type": "Encounter Worship (feat. Sean Tobin) · 2022",
+      "year": "",
+      "blurb": "A charismatic worship single invoking the Holy Spirit — Lord and Giver of Life.",
+      "url": "https://open.spotify.com/track/47mhBdcKMJipFy3KmuVsrd"
     }
   ]
 }
