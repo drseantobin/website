@@ -54,15 +54,6 @@
       "badge": ""
     },
     {
-      "title": "Big God, Little Devil — Companion Workbook",
-      "subtitle": "A guided workbook for the journey out of fear",
-      "description": "The working companion to Big God, Little Devil: exercises, examinations, and prayer structures for actually walking free rather than just reading about it. Releasing later this month.",
-      "amazon_url": "",
-      "cover": "assets/covers/workbook.jpg",
-      "formats": "Paperback · $14.99",
-      "badge": "Coming soon"
-    },
-    {
       "title": "Sick Seven",
       "subtitle": "A children's story about anxiety and presence",
       "description": "A picture book for kids about the worry that visits us all — and the quiet, steady presence that meets it. Gentle, funny, and true.",
@@ -70,6 +61,33 @@
       "cover": "assets/covers/sick-seven.jpg",
       "formats": "Paperback",
       "badge": ""
+    },
+    {
+      "title": "The Heart of Exorcism",
+      "subtitle": "Faith, healing, and evangelization",
+      "description": "The follow-up to Big God, Little Devil: what deliverance is really for — not spectacle, but the healing and evangelization at the heart of the Church's ministry.",
+      "amazon_url": "",
+      "cover": "assets/covers/heart-of-exorcism.jpg",
+      "formats": "Paperback",
+      "badge": "Coming soon"
+    },
+    {
+      "title": "Humanity in the Age of AI",
+      "subtitle": "Staying human when the machines arrive",
+      "description": "A wide-angle look at what artificial intelligence is doing to human life — work, attention, relationship, and meaning — and how to stay fully human through the shift.",
+      "amazon_url": "",
+      "cover": "assets/covers/humanity.jpg",
+      "formats": "Paperback · Kindle",
+      "badge": "Coming soon"
+    },
+    {
+      "title": "Big God, Little Devil — Companion Workbook",
+      "subtitle": "A guided workbook for the journey out of fear",
+      "description": "The working companion to Big God, Little Devil: exercises, examinations, and prayer structures for actually walking free rather than just reading about it. Releasing later this month.",
+      "amazon_url": "",
+      "cover": "assets/covers/workbook.jpg",
+      "formats": "Paperback · $14.99",
+      "badge": "Coming soon"
     }
   ],
   "podcast": [

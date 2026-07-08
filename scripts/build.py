@@ -273,7 +273,7 @@ def book_card(b, depth=0):
     link_close = "</a>" if b["amazon_url"] else "</div>"
     badge = f'<span class="badge badge-gold">{esc(b["badge"])}</span>' if b.get("badge") else ""
     cover = b.get("cover", "")
-    cover_el = (f'<div class="book-cover" style="background-image:url(\'{r}{esc(cover)}\')"></div>'
+    cover_el = (f'<img class="book-cover" src="{r}{esc(cover)}" alt="{esc(b["title"])} — book cover" loading="lazy">'
                 if cover else f'<div class="book-cover book-cover-type"><span>{esc(b["title"])}</span></div>')
     cta = '<span class="listen-more">Buy on Amazon →</span>' if b["amazon_url"] else '<span class="card-date">Coming soon</span>'
     return f"""{link_open}
