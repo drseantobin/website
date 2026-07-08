@@ -11,15 +11,12 @@ SRC = ROOT / "assets" / "covers"
 OUT = SRC / "3d"
 OUT.mkdir(exist_ok=True)
 
-# slug : page count (estimates — edit freely; controls how thick the book looks)
-BOOKS = {
-    "remaining-human": 140,
-    "big-god-little-devil": 224,
-    "sick-seven": 32,
-    "workbook": 80,
-    "humanity": 208,
-    "heart-of-exorcism": 176,
-}
+# DEPRECATED / SUPERSEDED. All six 3D covers in assets/covers/3d/ are now real
+# photorealistic mockups: big-god-little-devil is the transparent render from
+# biggodlittledevil.com; the other five were generated in the ChatGPT app from
+# the flat covers in My Drive/Website/covers-to-render (paperback, transparent).
+# Do NOT run this script — it would clobber those good renders. Kept for history.
+BOOKS = {}
 
 FH = 1180          # front cover height (px) before perspective
 PAD = 130          # canvas padding
