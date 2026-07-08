@@ -1,0 +1,112 @@
+{
+  "site": {
+    "title": "Dr. Sean Tobin",
+    "domain": "drseantobin.ca",
+    "roles": "Psychologist · Author · Worship Leader",
+    "tagline": "Leaving the Egypt of distraction and fear.",
+    "intro": "I'm a clinical psychologist and Catholic convert writing at the intersection of faith, psychology, and the age of AI. The Inner Exodus is the journey out.",
+    "substack_url": "https://drseantobin.substack.com",
+    "subscribe_url": "https://drseantobin.substack.com/subscribe",
+    "irenaeus": "The glory of God is man fully alive, and the life of man is the vision of God.",
+    "socials": {
+      "Substack": "https://drseantobin.substack.com",
+      "Instagram": "https://www.instagram.com/drseantobin",
+      "YouTube": "https://www.youtube.com/@drseantobin",
+      "Facebook": "https://www.facebook.com/drseantobin",
+      "X": "https://x.com/drseantobin",
+      "TikTok": "https://www.tiktok.com/@seantobinofficial"
+    }
+  },
+  "about": {
+    "bio": [
+      "Sean Tobin is a clinical psychologist, a convert from atheism, and a charismatic Catholic. His work sits where the interior life meets the clinic: healing, worship, and teaching people how to stay human in an age built to scatter them.",
+      "He writes The Inner Exodus, a Substack read by tens of thousands at the intersection of faith, psychology, and artificial intelligence — about attention, desire, formation, and what machines can and cannot do to the soul.",
+      "He is the author of Big God, Little Devil and Remaining Human, leads worship, and speaks widely on psychology, deliverance, and the spiritual life."
+    ],
+    "pillars": [
+      {"name": "Healing", "text": "Clinical psychology in the light of grace — therapy, discernment, and the slow repair of the interior life."},
+      {"name": "Worship", "text": "Leading people into the presence of God through music — the posture the whole work flows from."},
+      {"name": "Teaching", "text": "Essays, books, and talks on faith, psychology, and the age of AI — formation for people who refuse to be automated."}
+    ]
+  },
+  "books": [
+    {
+      "title": "Remaining Human",
+      "subtitle": "Staying fully alive in the age of AI",
+      "description": "What artificial intelligence can do, what it cannot, and what it is quietly doing to attention, desire, and the soul — and how to remain fully human as the machines arrive.",
+      "amazon_url": "https://www.amazon.com/dp/B0H7SJRZM5",
+      "formats": "Paperback · Kindle",
+      "badge": "New"
+    },
+    {
+      "title": "Big God, Little Devil",
+      "subtitle": "A radical shift in the approach to spiritual warfare and deliverance",
+      "description": "A psychologist's book on the demonic that refuses both obsession and denial: the devil is real, and he is small. A book about getting the proportions right — and getting free.",
+      "amazon_url": "https://biggodlittledevil.com/",
+      "formats": "Paperback · Kindle · Audiobook",
+      "badge": ""
+    },
+    {
+      "title": "Big God, Little Devil — Companion Workbook",
+      "subtitle": "A guided workbook for the journey out of fear",
+      "description": "The working companion to Big God, Little Devil: exercises, examinations, and prayer structures for actually walking free rather than just reading about it. Releasing later this month.",
+      "amazon_url": "",
+      "formats": "Paperback · $14.99",
+      "badge": "Coming soon"
+    },
+    {
+      "title": "Sick Seven",
+      "subtitle": "A children's story about anxiety and presence",
+      "description": "A picture book for kids about the worry that visits us all — and the quiet, steady presence that meets it. Gentle, funny, and true.",
+      "amazon_url": "https://www.amazon.com/dp/B0H7QSF7Y2",
+      "formats": "Paperback",
+      "badge": ""
+    }
+  ],
+  "podcast": [
+    {
+      "show": "The Lila Rose Show",
+      "episode": "What Exorcists on YouTube Get Wrong",
+      "date": "Jan 2025",
+      "blurb": "Episode 177 — mental health, the demonic, and where popular deliverance content goes off the rails.",
+      "url": "https://podcasts.apple.com/us/podcast/e177-what-exorcists-on-youtube-get-wrong-w-dr-sean-tobin/id1460036160?i=1000682520292"
+    },
+    {
+      "show": "The Exorcist Files",
+      "episode": "Mental Health and the Demonic",
+      "date": "Nov 2024",
+      "blurb": "Where clinical psychology ends and spiritual warfare begins — and why confusing the two harms people.",
+      "url": "https://open.spotify.com/episode/55zB6Nho1m7Tudwt1GQpk3"
+    },
+    {
+      "show": "Restore the Glory",
+      "episode": "Deliverance and Healing (Part 2)",
+      "date": "Episode 146",
+      "blurb": "The second half of a conversation on deliverance, inner healing, and the psychology beneath both.",
+      "url": "https://open.spotify.com/episode/0tTS9hTpQeT7eV7ULn5xKM"
+    },
+    {
+      "show": "Ecstatic Integration",
+      "episode": "Demons, Parts Work, and Psychedelics",
+      "date": "",
+      "blurb": "A Catholic clinician's view on the demonic, internal-family-systems parts work, and the psychedelic turn.",
+      "url": "https://www.ecstaticintegration.org/p/catholic-exorcism-expert-on-demons"
+    }
+  ],
+  "music": [
+    {
+      "title": "Lord and Giver of Life",
+      "type": "Single · Encounter Worship (feat. Sean Tobin)",
+      "year": "2022",
+      "blurb": "A charismatic worship single invoking the Holy Spirit — Lord and Giver of Life.",
+      "url": "https://music.apple.com/au/album/lord-and-giver-of-life-feat-sean-tobin-single/1657097891"
+    },
+    {
+      "title": "Overshadow Me (Ruach)",
+      "type": "Sean Tobin Band",
+      "year": "",
+      "blurb": "A prayer set to music — asking the Spirit to overshadow, the ruach of God.",
+      "url": "https://seantobinband.wordpress.com/overshadow-me-ruach/"
+    }
+  ]
+}
