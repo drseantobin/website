@@ -596,11 +596,6 @@ def build_contact():
         <p>The simplest way to keep in touch is The Inner Exodus. One or two essays a week, free.</p>
         <a class="btn btn-ghost-dark" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe on Substack</a>
       </div>
-      <div class="contact-card">
-        <h3>Book a session</h3>
-        <p>For clinical work, new clients can schedule directly through my client portal.</p>
-        <a class="btn btn-ghost-dark" href="{esc(SITE.get('main_site_url',''))}" target="_blank" rel="noopener">Go to client portal</a>
-      </div>
       <div class="contact-card contact-card-bonus">
         <h3>A bonus: my dissertation</h3>
         <p>Exorcism, Deliverance, and Psychotherapy, from a Catholic-Christian perspective. Free to read.</p>
