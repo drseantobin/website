@@ -5,6 +5,7 @@ Zero dependencies. Reads content/site_data.json + content/posts_index.json +
 content/posts/*.json (produced by sync_substack.py) and writes the whole site
 into public/.
 """
+import hashlib
 import html
 import json
 import re
@@ -177,6 +178,10 @@ def social_tiles():
     return '<div class="social-tiles">' + "".join(tiles) + "</div>"
 
 
+# content hash of the stylesheet, appended as ?v= so browsers drop stale cached CSS on deploy
+CSS_VERSION = hashlib.md5((ASSETS / "style.css").read_bytes()).hexdigest()[:8]
+
+
 def page(title, body, *, active="", depth=0, description=""):
     r = "../" * depth
     nav_items = [("Writing", "writing/"), ("Books", "books/"), ("Podcast", "podcast/"),
@@ -203,7 +208,7 @@ def page(title, body, *, active="", depth=0, description=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{r}assets/style.css">
+<link rel="stylesheet" href="{r}assets/style.css?v={CSS_VERSION}">
 </head>
 <body>
 <header class="topbar">
