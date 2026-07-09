@@ -267,7 +267,15 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
 }
 .ep-row:hover h3 { color: var(--gold); }
 .ep-row .listen-more { margin-left: auto; white-space: nowrap; }
+.ep-thumb {
+  flex: 0 0 auto; width: 4.2rem; height: 4.2rem; border-radius: 8px;
+  object-fit: cover; background: var(--linen-alt); box-shadow: 0 4px 12px rgba(29,37,52,0.12);
+}
+.ep-row-body { flex: 1 1 auto; min-width: 0; }
 .empty-note { color: var(--faded); font-style: italic; }
+@media (max-width: 560px) {
+  .ep-thumb { width: 3.2rem; height: 3.2rem; }
+}
 
 /* ---------- quote & cta bands ---------- */
 .quote-band {

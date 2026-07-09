@@ -483,8 +483,12 @@ def build_books():
 def build_podcast():
     eps = DATA["podcast"]
     if eps:
+        def thumb_el(e):
+            t = e.get("thumb", "")
+            return f'<img class="ep-thumb" src="{esc(t)}" alt="" loading="lazy">' if t else ""
         items = "".join(f"""<a class="ep-row" href="{esc(e['url'])}" target="_blank" rel="noopener">
-  <div><p class="card-date">{esc(e.get('show',''))} · {esc(e.get('date',''))}</p>
+  {thumb_el(e)}
+  <div class="ep-row-body"><p class="card-date">{esc(e.get('show',''))} · {esc(e.get('date',''))}</p>
   <h3>{esc(e['episode'])}</h3><p class="card-sub">{esc(e.get('blurb',''))}</p></div>
   <span class="listen-more">Listen →</span></a>""" for e in eps)
         listing = f'<div class="ep-list">{items}</div>'
@@ -512,8 +516,12 @@ def build_music():
     if tracks:
         def meta_line(t):
             return " · ".join(x for x in (t.get('type', ''), t.get('year', '')) if x)
+        def thumb_el(t):
+            th = t.get("thumb", "")
+            return f'<img class="ep-thumb" src="{esc(th)}" alt="" loading="lazy">' if th else ""
         items = "".join(f"""<a class="ep-row" href="{esc(t['url'])}" target="_blank" rel="noopener">
-  <div><p class="card-date">{esc(meta_line(t))}</p>
+  {thumb_el(t)}
+  <div class="ep-row-body"><p class="card-date">{esc(meta_line(t))}</p>
   <h3>{esc(t['title'])}</h3><p class="card-sub">{esc(t.get('blurb',''))}</p></div>
   <span class="listen-more">Listen →</span></a>""" for t in tracks)
         listing = f'<div class="ep-list">{items}</div>'
