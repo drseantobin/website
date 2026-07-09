@@ -223,13 +223,17 @@ a:focus-visible, button:focus-visible {
   display: flex; flex-direction: column; text-align: center;
   text-decoration: none; background: none; border: 0;
 }
-/* pre-rendered 3D book stands alone on the page — no panel behind it */
+/* pre-rendered 3D book stands alone on the page — no panel behind it.
+   Fixed-height stage = every book sits on the same shelf line, so the
+   titles below all start level regardless of each cover's aspect ratio. */
 .book-stage {
+  height: 20rem;
   padding: 0.5rem 1rem 1.4rem;
   display: flex; justify-content: center; align-items: flex-end;
 }
 .book-3d {
-  display: block; width: 82%; max-width: 14rem; height: auto;
+  display: block; width: auto; height: auto;
+  max-width: min(82%, 14rem); max-height: 100%;
   transition: transform 0.3s ease;
 }
 a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
