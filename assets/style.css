@@ -334,6 +334,8 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
   margin: 1rem 0 1.2rem;
 }
 .page-head .hero-sub { margin: 0 auto; }
+/* tighten the gap between a page title and the content section below it */
+.page-head + .section { padding-top: 2rem; }
 
 /* ---------- post pages ---------- */
 .post { padding-bottom: 4rem; }
