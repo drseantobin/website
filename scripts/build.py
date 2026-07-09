@@ -122,6 +122,10 @@ def esc(s):
     return html.escape(s or "", quote=True)
 
 
+def res_url(r, url):
+    return url if url.startswith("http") else f"{r}{url}"
+
+
 def fmt_date(iso):
     if not iso:
         return ""
@@ -619,11 +623,21 @@ def build_contact():
 
 
 def build_about():
+    r = "../"
     bio = "".join(f"<p>{esc(b)}</p>" for b in DATA["about"]["bio"])
     pillars = "".join(
         f'<div class="pillar"><h3>{esc(pl["name"])}</h3><p>{esc(pl["text"])}</p></div>'
         for pl in DATA["about"]["pillars"]
     )
+    resources = DATA.get("resources", [])
+    res_cards = "".join(f"""<a class="resource-card" href="{res_url(r, item['url'])}" target="_blank" rel="noopener">
+  <h3>{esc(item['title'])}</h3><p>{esc(item['blurb'])}</p>
+  <span class="listen-more">{esc(item['cta'])} →</span></a>""" for item in resources)
+    res_section = f"""<section class="section free-resources">
+  <p class="eyebrow" style="text-align:center">Free to keep</p>
+  <h2 style="text-align:center">A few things that cost nothing.</h2>
+  <div class="resource-grid">{res_cards}</div>
+</section>""" if resources else ""
     body = f"""
 <section class="page-head">
   <p class="eyebrow">About</p>
@@ -631,6 +645,7 @@ def build_about():
 </section>
 <section class="section"><div class="post-body about-bio">{bio}</div>
 <div class="pillars">{pillars}</div></section>
+{res_section}
 <section class="quote-band">
   <blockquote>“{esc(SITE['irenaeus'])}”</blockquote>
   <p class="quote-attr">St. Irenaeus of Lyons</p>

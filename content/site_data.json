@@ -185,5 +185,31 @@
       "url": "https://open.spotify.com/track/47mhBdcKMJipFy3KmuVsrd",
       "thumb": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027341af976b011d38717f9f55"
     }
+  ],
+  "resources": [
+    {
+      "title": "Examen AI",
+      "blurb": "A free, on-device app for the nightly examen and confession prep. No account, no data leaves your phone.",
+      "url": "https://drseantobin.github.io/examen",
+      "cta": "Open the app"
+    },
+    {
+      "title": "Divine Dialogue",
+      "blurb": "A short guide to hearing God's voice in prayer, identity, and emotional healing.",
+      "url": "assets/resources/divine-dialogue.pdf",
+      "cta": "Read free"
+    },
+    {
+      "title": "Come, Spirit of Power",
+      "blurb": "A Pentecost novena for mission, witness, and bold love.",
+      "url": "assets/resources/come-spirit-of-power-novena.pdf",
+      "cta": "Read free"
+    },
+    {
+      "title": "The Altar of Christ",
+      "blurb": "A novena for priestly vocations and the renewal of the Church.",
+      "url": "assets/resources/altar-of-christ-novena.pdf",
+      "cta": "Read free"
+    }
   ]
 }
