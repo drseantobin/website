@@ -597,9 +597,9 @@ def build_contact():
         <a class="btn btn-ghost-dark" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe on Substack</a>
       </div>
       <div class="contact-card">
-        <h3>Work with me</h3>
-        <p>For clinical work, speaking, and booking, my main site has the details.</p>
-        <a class="btn btn-ghost-dark" href="{esc(SITE.get('main_site_url',''))}" target="_blank" rel="noopener">Visit my main site</a>
+        <h3>Book a session</h3>
+        <p>For clinical work, new clients can schedule directly through my client portal.</p>
+        <a class="btn btn-ghost-dark" href="{esc(SITE.get('main_site_url',''))}" target="_blank" rel="noopener">Go to client portal</a>
       </div>
       <div class="contact-card contact-card-bonus">
         <h3>A bonus: my dissertation</h3>
