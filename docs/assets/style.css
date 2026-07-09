@@ -281,6 +281,14 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
   .ep-thumb { width: 3.2rem; height: 3.2rem; }
 }
 
+/* ---------- music page photo ---------- */
+.music-photo-section { padding-top: 0; }
+.music-photo { max-width: 34rem; margin: 0 auto; }
+.music-photo img {
+  display: block; width: 100%; height: auto; border-radius: 4px;
+  box-shadow: 0 18px 40px -18px rgba(29, 37, 52, 0.35);
+}
+
 /* ---------- quote & cta bands ---------- */
 .quote-band {
   background: var(--night);

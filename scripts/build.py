@@ -548,6 +548,11 @@ def build_music():
   {linkbar}
 </section>
 <section class="section">{listing}</section>
+<section class="section music-photo-section">
+  <figure class="music-photo">
+    <img src="../assets/sean-guitar.jpg" alt="Sean Tobin playing acoustic guitar outdoors" loading="lazy">
+  </figure>
+</section>
 """
     write("music/index.html", page("Music · Dr. Sean Tobin", body, active="Music", depth=1))
 
