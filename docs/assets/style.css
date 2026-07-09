@@ -512,6 +512,12 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
 
 /* music artist links */
 .music-links { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.6rem; }
+.music-link {
+  color: #fff; border: none;
+  box-shadow: 0 6px 16px rgba(29, 37, 52, 0.18);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+.music-link:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(29, 37, 52, 0.24); filter: brightness(1.08); color: #fff; }
 
 /* clickable paid badge */
 a.badge-link { text-decoration: none; }

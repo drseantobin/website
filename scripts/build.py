@@ -505,11 +505,15 @@ def build_podcast():
     write("podcast/index.html", page("Podcast · Dr. Sean Tobin", body, active="Podcast", depth=1))
 
 
+MUSIC_LINK_COLORS = {"Spotify": "#1DB954", "Apple Music": "#FA243C"}
+
+
 def build_music():
     tracks = DATA["music"]
     links = SITE.get("music_links", {})
     btns = "".join(
-        f'<a class="btn btn-ghost-dark" href="{esc(u)}" target="_blank" rel="noopener">{esc(n)} →</a>'
+        f'<a class="btn music-link" style="background:{MUSIC_LINK_COLORS.get(n, "var(--night)")}" '
+        f'href="{esc(u)}" target="_blank" rel="noopener">{esc(n)} →</a>'
         for n, u in links.items() if u
     )
     linkbar = f'<div class="music-links">{btns}</div>' if btns else ""
