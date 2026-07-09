@@ -431,8 +431,11 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
 .connect-head h2 { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 600; margin: 0.3rem 0 0.6rem; }
 .social-tiles {
   display: grid; gap: 0.9rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 52rem; margin: 0 auto;
 }
+@media (max-width: 680px) { .social-tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .social-tiles { grid-template-columns: 1fr; } }
 .social-tile {
   display: flex; align-items: center; gap: 0.9rem;
   padding: 0.95rem 1.1rem; text-decoration: none;
