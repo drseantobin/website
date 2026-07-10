@@ -20,6 +20,8 @@ ASSETS = ROOT / "assets"
 
 DATA = json.loads((CONTENT / "site_data.json").read_text())
 SITE = DATA["site"]
+BASE = f"https://{SITE['domain']}"
+RSS_URL = f"{SITE['substack_url']}/feed"
 INDEX = json.loads((CONTENT / "posts_index.json").read_text())
 
 _cat_file = CONTENT / "categories.json"
@@ -186,7 +188,7 @@ def person_jsonld():
     """schema.org Person entity (JSON-LD) — machine-readable identity for
     search engines and AI agents. Generated from site_data.json so it stays
     in sync with socials and the book list."""
-    base = f"https://{SITE['domain']}"
+    base = BASE
     person_id = f"{base}/#person"
     books = []
     for b in DATA.get("books", []):
@@ -228,8 +230,9 @@ def person_jsonld():
             + "\n</script>")
 
 
-def page(title, body, *, active="", depth=0, description=""):
-    r = "../" * depth
+def page(title, body, *, active="", depth=0, description="", path=None,
+         og_type="website", og_image=None, extra_head="", absolute=False):
+    r = "/" if absolute else "../" * depth
     nav_items = [("Writing", "writing/"), ("Books", "books/"), ("Podcast", "podcast/"),
                  ("Music", "music/"), ("About", "about/"), ("Contact", "contact/")]
     nav = "".join(
@@ -243,6 +246,21 @@ def page(title, body, *, active="", depth=0, description=""):
         for name in _ordered
     )
     desc = esc(description or SITE["intro"])
+    img = esc(og_image or f"{BASE}/assets/sean-portrait.jpg")
+    social_meta = ""
+    if path is not None:
+        url = f"{BASE}/{path}"
+        social_meta = f"""<link rel="canonical" href="{url}">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="Dr. Sean Tobin">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{img}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{img}">"""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,16 +268,19 @@ def page(title, body, *, active="", depth=0, description=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{desc}">
+{social_meta}
+<link rel="alternate" type="application/rss+xml" title="The Inner Exodus" href="{RSS_URL}">
 <link rel="icon" href="{r}assets/inner-exodus-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}assets/style.css?v={CSS_VERSION}">
 {person_jsonld()}
+{extra_head}
 </head>
 <body>
 <header class="topbar">
-  <a class="wordmark" href="{r if depth else './'}">Dr.&thinsp;Sean&thinsp;Tobin</a>
+  <a class="wordmark" href="{r if (depth or absolute) else './'}">Dr.&thinsp;Sean&thinsp;Tobin</a>
   <nav class="mainnav">{nav}</nav>
   <a class="btn btn-subscribe" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe</a>
 </header>
@@ -364,7 +385,7 @@ def build_home():
   <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe to The Inner Exodus</a>
 </section>
 """
-    write("index.html", page(f"Dr. Sean Tobin · {SITE['tagline']}", body, active="", depth=0))
+    write("index.html", page(f"Dr. Sean Tobin · {SITE['tagline']}", body, active="", depth=0, path=""))
 
 
 def book_card(b, depth=0):
@@ -472,7 +493,7 @@ def build_writing_index():
 </section>
 <script>{WRITING_JS}</script>
 """
-    write("writing/index.html", page("Writing · Dr. Sean Tobin", body, active="Writing", depth=1))
+    write("writing/index.html", page("Writing · Dr. Sean Tobin", body, active="Writing", depth=1, path="writing/"))
 
 
 def build_posts():
@@ -518,9 +539,29 @@ def build_posts():
   {body_content}
 </article>
 """
+        post_ld = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": meta["title"],
+            "description": meta["description"] or meta["subtitle"] or "",
+            "datePublished": meta["date"],
+            "url": f"{BASE}/writing/{slug}/",
+            "mainEntityOfPage": f"{BASE}/writing/{slug}/",
+            "author": {"@id": f"{BASE}/#person"},
+            "isAccessibleForFree": not paid,
+            "isPartOf": {"@type": "Blog", "name": "The Inner Exodus",
+                         "url": SITE["substack_url"]},
+        }
+        if meta.get("cover_image"):
+            post_ld["image"] = meta["cover_image"]
+        extra = ('<script type="application/ld+json">\n'
+                 + json.dumps(post_ld, indent=1, ensure_ascii=False)
+                 + "\n</script>")
         write(f"writing/{slug}/index.html",
               page(f"{meta['title']} · Dr. Sean Tobin", body, active="Writing", depth=2,
-                   description=meta["description"] or meta["subtitle"]))
+                   description=meta["description"] or meta["subtitle"],
+                   path=f"writing/{slug}/", og_type="article",
+                   og_image=meta.get("cover_image"), extra_head=extra))
 
 
 def build_books():
@@ -533,7 +574,7 @@ def build_books():
 </section>
 <section class="section"><div class="book-grid">{cards}</div></section>
 """
-    write("books/index.html", page("Books · Dr. Sean Tobin", body, active="Books", depth=1))
+    write("books/index.html", page("Books · Dr. Sean Tobin", body, active="Books", depth=1, path="books/"))
 
 
 def build_podcast():
@@ -558,7 +599,7 @@ def build_podcast():
 </section>
 <section class="section">{listing}</section>
 """
-    write("podcast/index.html", page("Podcast · Dr. Sean Tobin", body, active="Podcast", depth=1))
+    write("podcast/index.html", page("Podcast · Dr. Sean Tobin", body, active="Podcast", depth=1, path="podcast/"))
 
 
 MUSIC_LINK_COLORS = {"Spotify": "#1DB954", "Apple Music": "#FA243C"}
@@ -601,7 +642,7 @@ def build_music():
   </figure>
 </section>
 """
-    write("music/index.html", page("Music · Dr. Sean Tobin", body, active="Music", depth=1))
+    write("music/index.html", page("Music · Dr. Sean Tobin", body, active="Music", depth=1, path="music/"))
 
 
 def build_contact():
@@ -671,7 +712,7 @@ def build_contact():
 </section>
 <script>{js}</script>
 """
-    write("contact/index.html", page("Contact · Dr. Sean Tobin", body, active="Contact", depth=1))
+    write("contact/index.html", page("Contact · Dr. Sean Tobin", body, active="Contact", depth=1, path="contact/"))
 
 
 def build_about():
@@ -711,7 +752,81 @@ def build_about():
   </div>
 </section>
 """
-    write("about/index.html", page("About · Dr. Sean Tobin", body, active="About", depth=1))
+    write("about/index.html", page("About · Dr. Sean Tobin", body, active="About", depth=1, path="about/"))
+
+
+STATIC_PATHS = ["", "writing/", "books/", "podcast/", "music/", "about/", "contact/"]
+
+
+def build_seo_files():
+    """sitemap.xml, robots.txt, llms.txt, 404.html — discoverability layer."""
+    # sitemap
+    entries = [f"<url><loc>{BASE}/{p}</loc></url>" for p in STATIC_PATHS]
+    entries += [
+        f"<url><loc>{BASE}/writing/{m['slug']}/</loc>"
+        f"<lastmod>{m['date'][:10]}</lastmod></url>"
+        for m in INDEX
+    ]
+    write("sitemap.xml",
+          '<?xml version="1.0" encoding="UTF-8"?>\n'
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+          + "\n".join(entries) + "\n</urlset>\n")
+
+    # robots — everyone welcome, including AI crawlers
+    write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+
+    # llms.txt — the site explained to AI agents, in markdown
+    books_md = "\n".join(
+        f"- [{b['title']}]({b['amazon_url'] or BASE + '/books/'}): {b.get('subtitle') or b['description']}"
+        for b in DATA["books"]
+    )
+    essays_md = "\n".join(
+        f"- [{m['title']}]({BASE}/writing/{m['slug']}/): {m['description'] or m['subtitle'] or ''}".rstrip(": ")
+        for m in INDEX
+    )
+    socials_md = "\n".join(f"- [{n}]({u})" for n, u in SITE["socials"].items() if u)
+    write("llms.txt", f"""# Dr. Sean Tobin
+
+> {SITE['intro']}
+
+Dr. Sean Tobin, Psy.D., is a clinical psychologist, Catholic author, and worship
+leader ({SITE['roles']}). His work — the Inner Exodus — is about healing,
+formation, and staying fully human in the age of AI. He writes weekly essays,
+publishes books, and speaks on psychology, spiritual warfare and deliverance,
+attention, and artificial intelligence.
+
+## Books
+
+{books_md}
+
+## Essays
+
+{essays_md}
+
+## Elsewhere
+
+- [The Inner Exodus on Substack]({SITE['substack_url']}): essays first appear here
+- [Essay RSS feed]({RSS_URL})
+{socials_md}
+
+## Contact
+
+- [Contact page]({BASE}/contact/)
+""")
+
+    # 404 — served by GitHub Pages at any depth, so links must be absolute
+    body = f"""
+<section class="page-head">
+  <p class="eyebrow">404</p>
+  <h1>This page wandered off.</h1>
+  <p class="hero-sub">The page you're looking for isn't here. The essays, the books, and the way back are.</p>
+  <div class="hero-ctas">
+    <a class="btn btn-gold" href="/writing/">Read the essays</a>
+    <a class="btn btn-ghost" href="/">Back home</a>
+  </div>
+</section>
+"""
+    write("404.html", page("Page not found · Dr. Sean Tobin", body, absolute=True))
 
 
 def write(rel, content):
@@ -733,6 +848,7 @@ def main():
     build_music()
     build_about()
     build_contact()
+    build_seo_files()
     (PUBLIC / ".nojekyll").write_text("")
     cname = ROOT / "CNAME"
     if cname.exists():
