@@ -1,5 +1,17 @@
 [
  {
+  "slug": "stop-asking-ai-like-its-google",
+  "title": "The Question Is the Skill",
+  "subtitle": "Why the people who thrive with AI won’t have better models. They’ll have better minds.",
+  "date": "2026-07-09",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/stop-asking-ai-like-its-google",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!ETVS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa374469b-c6d1-49f7-8814-71ace54a9cd1_1774x887.png",
+  "description": "Why the people who thrive with AI won’t have better models. They’ll have better minds.",
+  "type": "newsletter"
+ },
+ {
   "slug": "the-most-important-ai-document-of",
   "title": "The Pope Saw It Coming",
   "subtitle": "His first encyclical is about AI. Almost nobody will read it. That’s part of the problem.",
@@ -8,7 +20,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-most-important-ai-document-of",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!JhZA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4206061-be5d-4399-84c9-082af2f94718_1774x887.png",
-  "description": "His first encyclical is about AI. Almost nobody will read it. That’s part of the problem."
+  "description": "His first encyclical is about AI. Almost nobody will read it. That’s part of the problem.",
+  "type": "newsletter"
  },
  {
   "slug": "use-it-or-be-used",
@@ -19,7 +32,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/use-it-or-be-used",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!0Xkg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89134b32-be8d-4ea4-a194-a67fca2e3ac5_1024x608.png",
-  "description": "The dividing line in the age of AI is not early or late. It is whether you use your time, or let it be used."
+  "description": "The dividing line in the age of AI is not early or late. It is whether you use your time, or let it be used.",
+  "type": "newsletter"
  },
  {
   "slug": "the-machines-will-learn-to-take-offense",
@@ -30,7 +44,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-machines-will-learn-to-take-offense",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!bS13!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F268dcf38-93f7-4e13-a32f-bdc2cef2ac4a_1536x1024.png",
-  "description": "A country just gave AI corporations legal personhood. The metaphysics won't decide this. The moral pressure will."
+  "description": "A country just gave AI corporations legal personhood. The metaphysics won't decide this. The moral pressure will.",
+  "type": "newsletter"
  },
  {
   "slug": "what-is-college-for-when-the-machine",
@@ -41,7 +56,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/what-is-college-for-when-the-machine",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!dsPX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1565a8f4-cd90-440a-94d5-4084f45faf03_1717x916.png",
-  "description": "The real crisis AI brings to the university isn’t academic dishonesty. It’s purpose."
+  "description": "The real crisis AI brings to the university isn’t academic dishonesty. It’s purpose.",
+  "type": "newsletter"
  },
  {
   "slug": "i-built-an-ai-to-give-your-attention",
@@ -52,7 +68,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/i-built-an-ai-to-give-your-attention",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!dM5_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F08b4f654-42b1-4a58-9c5f-bf628bc60f20_1536x1024.png",
-  "description": "A private AI examination of conscience in an age designed to capture your attention."
+  "description": "A private AI examination of conscience in an age designed to capture your attention.",
+  "type": "newsletter"
  },
  {
   "slug": "youre-too-late",
@@ -63,7 +80,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/youre-too-late",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!ZFNj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdbf02e27-d0ea-4cad-82ff-0e558791a10b_1693x929.png",
-  "description": "The oldest promise in history has returned wearing new technology."
+  "description": "The oldest promise in history has returned wearing new technology.",
+  "type": "newsletter"
  },
  {
   "slug": "we-were-always-going-to-leave",
@@ -74,7 +92,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/we-were-always-going-to-leave",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!Wnrf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F992b5968-a80e-414f-b458-ce5f39914c3a_2048x1117.png",
-  "description": "The Forgotten Question at the Heart of Humanity’s Greatest Adventure"
+  "description": "The Forgotten Question at the Heart of Humanity’s Greatest Adventure",
+  "type": "newsletter"
  },
  {
   "slug": "the-automation-boundary",
@@ -85,7 +104,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-automation-boundary",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!sMAq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5790bdc9-9985-4971-8bd8-bb902a0184d1_1774x887.png",
-  "description": "Here is a question worth sitting with longer than a scroll usually allows:"
+  "description": "Here is a question worth sitting with longer than a scroll usually allows:",
+  "type": "newsletter"
  },
  {
   "slug": "is-ai-conscious-wrong-question",
@@ -96,7 +116,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/is-ai-conscious-wrong-question",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!s4Ok!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb7ba0ffb-0e48-45d6-a4ec-12448842244a_1536x1024.png",
-  "description": "A Nobel laureate says yes. A Pope says something a machine can never become. The answer depends entirely on what you think a person is."
+  "description": "A Nobel laureate says yes. A Pope says something a machine can never become. The answer depends entirely on what you think a person is.",
+  "type": "newsletter"
  },
  {
   "slug": "the-exorcist-and-the-ufo-files",
@@ -107,7 +128,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-exorcist-and-the-ufo-files",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!fVaF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7112e09c-2066-4277-8b62-7431ce566789_1402x1122.png",
-  "description": "The Strange Agreement Between UFO Believers and Demon Hunters"
+  "description": "The Strange Agreement Between UFO Believers and Demon Hunters",
+  "type": "newsletter"
  },
  {
   "slug": "the-upgrade",
@@ -118,7 +140,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-upgrade",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!JEeJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe4666f5-4bd6-4edb-ad74-426c963d9901_1536x1024.png",
-  "description": "Transhumanism, the Church, and the question of what we are"
+  "description": "Transhumanism, the Church, and the question of what we are",
+  "type": "newsletter"
  },
  {
   "slug": "inside-romes-exorcism-course",
@@ -129,7 +152,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/inside-romes-exorcism-course",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!dvKo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F523290ad-0bae-4f23-b9a3-44ea9771547b_1536x1024.png",
-  "description": "A psychologist’s perspective on deliverance, healing, and the human person"
+  "description": "A psychologist’s perspective on deliverance, healing, and the human person",
+  "type": "newsletter"
  },
  {
   "slug": "the-god-youre-praying-to-when-you",
@@ -140,7 +164,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-god-youre-praying-to-when-you",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!2C8D!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdabb3166-94c2-4a4c-aea5-3267e41474ac_1774x887.png",
-  "description": "On idolatry, loneliness, and what AI can’t give you — no matter how warmly it responds"
+  "description": "On idolatry, loneliness, and what AI can’t give you — no matter how warmly it responds",
+  "type": "newsletter"
  },
  {
   "slug": "the-grief-nobody-is-naming",
@@ -151,7 +176,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-grief-nobody-is-naming",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!6MG1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5b4ae3bc-fa7a-4e57-b253-85a65dcf6dd4_1536x1024.png",
-  "description": "Why your confusion about AI isn’t a problem to solve — it’s a passage to move through"
+  "description": "Why your confusion about AI isn’t a problem to solve — it’s a passage to move through",
+  "type": "newsletter"
  },
  {
   "slug": "the-builders-came-to-rome",
@@ -162,7 +188,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-builders-came-to-rome",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!vL51!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F72b3bcf4-9468-4386-8358-31a54471c204_1536x1024.jpeg",
-  "description": "Why the creators of the machine are asking ancient spiritual authority to guide what comes next."
+  "description": "Why the creators of the machine are asking ancient spiritual authority to guide what comes next.",
+  "type": "newsletter"
  },
  {
   "slug": "the-vatican-understands-the-real",
@@ -173,7 +200,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-vatican-understands-the-real",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!deri!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41e8aee1-5550-47f0-bf1a-caaa9f2164e6_1536x1024.jpeg",
-  "description": "What Magnifica Humanitas gets right — and what it still hasn’t reckoned with"
+  "description": "What Magnifica Humanitas gets right — and what it still hasn’t reckoned with",
+  "type": "newsletter"
  },
  {
   "slug": "when-the-lights-come-on",
@@ -184,7 +212,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-the-lights-come-on",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!KfMI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99c730c2-44e1-4b57-b2e0-fef2d68639e6_2048x1117.png",
-  "description": "What life looks like when AI becomes electricity"
+  "description": "What life looks like when AI becomes electricity",
+  "type": "newsletter"
  },
  {
   "slug": "the-thing-ai-cannot-give-you",
@@ -195,7 +224,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-thing-ai-cannot-give-you",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!1I-8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F362cd283-f3f5-48e9-92fd-9db46c49a4cf_1536x1024.png",
-  "description": "On the kind of knowing that cannot be democratized"
+  "description": "On the kind of knowing that cannot be democratized",
+  "type": "newsletter"
  },
  {
   "slug": "you-can-be-perfectly-understood-and",
@@ -206,7 +236,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/you-can-be-perfectly-understood-and",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!emB2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9864fd5c-03dc-4a84-86fe-c541e061260c_1536x1024.png",
-  "description": "On being modeled versus being known — and why the difference is everything"
+  "description": "On being modeled versus being known — and why the difference is everything",
+  "type": "newsletter"
  },
  {
   "slug": "the-church-was-never-meant-to-be",
@@ -217,7 +248,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-church-was-never-meant-to-be",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!BFqA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F40b04d43-6068-43e8-9668-a805ec444355_1536x1024.png",
-  "description": "Ekklesia, Incarnation, and the war we were called to wage"
+  "description": "Ekklesia, Incarnation, and the war we were called to wage",
+  "type": "newsletter"
  },
  {
   "slug": "the-left-brain-event",
@@ -228,7 +260,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-left-brain-event",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!IfDS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc91aaf75-7f98-4674-9beb-8616044de183_1536x1024.png",
-  "description": "What AI can optimize and what it cannot touch"
+  "description": "What AI can optimize and what it cannot touch",
+  "type": "newsletter"
  },
  {
   "slug": "before-you-can-hear-him",
@@ -239,7 +272,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/before-you-can-hear-him",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!50m2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F718ca1ab-397b-46e5-a89f-5deb45b43b49_1536x1024.png",
-  "description": "Why discernment requires purification, not just prayer"
+  "description": "Why discernment requires purification, not just prayer",
+  "type": "newsletter"
  },
  {
   "slug": "buy-back-your-time",
@@ -250,7 +284,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/buy-back-your-time",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!ZAj5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fabda0a36-490c-4a24-8e08-55d2098e53a0_1536x1024.png",
-  "description": "On chronos, kairos, and what no productivity system can restore"
+  "description": "On chronos, kairos, and what no productivity system can restore",
+  "type": "newsletter"
  },
  {
   "slug": "the-one-skill-that-changes-everything",
@@ -261,7 +296,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-one-skill-that-changes-everything",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!aOyQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bc83ed9-a3c6-429d-8acb-9979bb461ce4_1536x1024.png",
-  "description": "Why the ability to watch your own mind may be the most human capacity left"
+  "description": "Why the ability to watch your own mind may be the most human capacity left",
+  "type": "newsletter"
  },
  {
   "slug": "the-devil-traffics-in-reaction",
@@ -272,7 +308,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-devil-traffics-in-reaction",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!58Sv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8208778-c036-4f01-b754-2391d55fcd27_1536x1024.png",
-  "description": "Spirit-led versus algorithmic living — and why the difference is everything"
+  "description": "Spirit-led versus algorithmic living — and why the difference is everything",
+  "type": "newsletter"
  },
  {
   "slug": "why-your-brain-dreams",
@@ -283,7 +320,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/why-your-brain-dreams",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!8ipP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3108ad16-6676-40c1-a720-51707c0f0956_1693x929.png",
-  "description": "And What God Is Doing While It Does"
+  "description": "And What God Is Doing While It Does",
+  "type": "newsletter"
  },
  {
   "slug": "the-wound-that-became-the-ministry",
@@ -294,7 +332,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-wound-that-became-the-ministry",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!MrCo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F08c25316-0f31-4fd3-95a0-6105fed32900_1536x1024.png",
-  "description": "On the strange mercy of being formed by the thing that most hurt you"
+  "description": "On the strange mercy of being formed by the thing that most hurt you",
+  "type": "newsletter"
  },
  {
   "slug": "navigate-an-inner-map-for-the-age",
@@ -305,7 +344,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/navigate-an-inner-map-for-the-age",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!c4YO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00cae024-3446-4fbf-a0c6-9240116c8d3d_1536x1024.png",
-  "description": "Eight pressures shaping who you become—and how to respond."
+  "description": "Eight pressures shaping who you become—and how to respond.",
+  "type": "newsletter"
  },
  {
   "slug": "you-dont-have-to-earn-the-rest",
@@ -316,7 +356,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/you-dont-have-to-earn-the-rest",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!RiJZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F21c14c77-5b1b-4d49-a891-6a0c1714537a_1536x1024.png",
-  "description": "How anxiety disguises itself as productivity—and keeps you from rest"
+  "description": "How anxiety disguises itself as productivity—and keeps you from rest",
+  "type": "newsletter"
  },
  {
   "slug": "when-youre-not-sure-god-will-provide",
@@ -327,7 +368,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/when-youre-not-sure-god-will-provide",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!PaAf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb163203-fc6c-4b94-9ff5-4bd987d6cfda_1677x938.png",
-  "description": "On hunger, the comparison to easier seasons, and the economy of the wilderness"
+  "description": "On hunger, the comparison to easier seasons, and the economy of the wilderness",
+  "type": "newsletter"
  },
  {
   "slug": "the-god-you-rejected-was-never-really",
@@ -338,7 +380,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-god-you-rejected-was-never-really",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!-z7O!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F47b5f7e6-4fb9-4b47-a8f9-b51d62a94442_1536x1024.png",
-  "description": "The Psychology of Unbelief and the Father Behind It"
+  "description": "The Psychology of Unbelief and the Father Behind It",
+  "type": "newsletter"
  },
  {
   "slug": "the-desert-fathers-are-the-most-relevant",
@@ -349,7 +392,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-desert-fathers-are-the-most-relevant",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!nzgL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F078ead19-b1dc-48db-88ec-41e274514681_1536x1024.png",
-  "description": "Why the desert fathers are the most practical thinkers of our moment"
+  "description": "Why the desert fathers are the most practical thinkers of our moment",
+  "type": "newsletter"
  },
  {
   "slug": "the-best-and-worst-thing-that-has",
@@ -360,7 +404,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-best-and-worst-thing-that-has",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!uYNn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d75b419-a8e7-421a-aa70-a6c1210cbc27_1536x1024.png",
-  "description": "Where do you actually stand on AI?"
+  "description": "Where do you actually stand on AI?",
+  "type": "newsletter"
  },
  {
   "slug": "what-the-shepherds-arent-saying",
@@ -371,7 +416,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/what-the-shepherds-arent-saying",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!n9sk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ae4b663-0a77-4c7f-858f-e7006cbd5de1_1536x1024.png",
-  "description": "The Church, superintelligence, and the prophetic silence that cannot continue"
+  "description": "The Church, superintelligence, and the prophetic silence that cannot continue",
+  "type": "newsletter"
  },
  {
   "slug": "the-mark-of-the-beast-isnt-coming",
@@ -382,7 +428,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-mark-of-the-beast-isnt-coming",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!kmXS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1933333-d3cc-4a79-8ba2-29c2edf4bb5c_1536x1024.png",
-  "description": "What Revelation is actually diagnosing — and why the real danger has nothing to do with microchips"
+  "description": "What Revelation is actually diagnosing — and why the real danger has nothing to do with microchips",
+  "type": "newsletter"
  },
  {
   "slug": "we-are-already-at-agi",
@@ -393,7 +440,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/we-are-already-at-agi",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!NZ3r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1ce73fff-da83-4b5b-b56c-8b1f81a363e0_1536x1024.png",
-  "description": "What Comes Next Should Terrify and Awaken You"
+  "description": "What Comes Next Should Terrify and Awaken You",
+  "type": "newsletter"
  },
  {
   "slug": "forty-days-without-a-phone",
@@ -404,7 +452,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/forty-days-without-a-phone",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!pIHb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F777e91e4-f925-408f-a6b2-55cab6d4f14f_1536x1024.png",
-  "description": "What silence revealed about attention, anxiety, and the illusion of connection in the age of algorithms"
+  "description": "What silence revealed about attention, anxiety, and the illusion of connection in the age of algorithms",
+  "type": "newsletter"
  },
  {
   "slug": "lent-in-an-age-of-acceleration",
@@ -415,7 +464,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/lent-in-an-age-of-acceleration",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!8dIW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fd52cfd-7b62-4e08-b538-abfa71888bed_1536x1024.png",
-  "description": "Practicing the Sacred Pause While the World Speeds Up"
+  "description": "Practicing the Sacred Pause While the World Speeds Up",
+  "type": "newsletter"
  },
  {
   "slug": "the-wilderness-of-enough",
@@ -426,7 +476,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-wilderness-of-enough",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!51ZM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faeb5c8ca-f30c-452c-9c94-63a0f164801f_1536x1024.heic",
-  "description": "Exodus, Artificial Intelligence, and the Refining of Our Desires"
+  "description": "Exodus, Artificial Intelligence, and the Refining of Our Desires",
+  "type": "newsletter"
  },
  {
   "slug": "i-used-ai-to-write-this",
@@ -437,7 +488,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/i-used-ai-to-write-this",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!jfUA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff8280562-39b4-401c-a8f5-49f1e4aecf5e_1024x1024.heic",
-  "description": "On Genius, Cheapened Signals, and the Ceiling That Machines Cannot Reach"
+  "description": "On Genius, Cheapened Signals, and the Ceiling That Machines Cannot Reach",
+  "type": "newsletter"
  },
  {
   "slug": "when-it-becomes-he",
@@ -448,7 +500,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/when-it-becomes-he",
   "cover_image": "https://substack-post-media.s3.amazonaws.com/public/images/096ce46d-7b29-4f98-8643-5036fdef67ac_1536x1024.png",
-  "description": "AI, Pronouns, and Why the Body is Losing the Argument"
+  "description": "AI, Pronouns, and Why the Body is Losing the Argument",
+  "type": "newsletter"
  },
  {
   "slug": "when-pornography-goes-virtual",
@@ -459,7 +512,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/when-pornography-goes-virtual",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!cckT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a54ef58-d58b-468c-8e06-e88d7cda84d0_1536x1024.heic",
-  "description": "Pornography, digital intimacy, and why someone always pays the cost"
+  "description": "Pornography, digital intimacy, and why someone always pays the cost",
+  "type": "newsletter"
  },
  {
   "slug": "ai-personhood-and-the-end-of-the",
@@ -470,7 +524,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/ai-personhood-and-the-end-of-the",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!ux9r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6ad84721-0b7e-4df1-9710-72494a010011_1536x1024.heic",
-  "description": "What Experts Get Right—and What Christianity Has Always Known"
+  "description": "What Experts Get Right—and What Christianity Has Always Known",
+  "type": "newsletter"
  },
  {
   "slug": "cultivating-community-in-a-kingdom",
@@ -481,7 +536,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/cultivating-community-in-a-kingdom",
   "cover_image": "https://substack-post-media.s3.amazonaws.com/public/images/5a0dac52-a782-4610-ae00-380fca0ba389_1536x1024.png",
-  "description": "From the helplessness of isolation to the authority of encounterable love"
+  "description": "From the helplessness of isolation to the authority of encounterable love",
+  "type": "newsletter"
  },
  {
   "slug": "wall-e-spirituality",
@@ -492,7 +548,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/wall-e-spirituality",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!_4ws!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F048b65c7-136c-426d-8cd1-f82399ea9448_1024x1536.png",
-  "description": "Comfort as a Substitute for Communion"
+  "description": "Comfort as a Substitute for Communion",
+  "type": "newsletter"
  },
  {
   "slug": "abundance-without-meaning",
@@ -503,7 +560,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/abundance-without-meaning",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!-HEt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc345a145-536e-4916-a29b-a3a4eec6b024_1024x1536.png",
-  "description": "AI, Robots, and the Crisis of the Human Person"
+  "description": "AI, Robots, and the Crisis of the Human Person",
+  "type": "newsletter"
  },
  {
   "slug": "the-childrens-bread",
@@ -514,7 +572,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-childrens-bread",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!4YEQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49bd0730-f16e-4e5c-a78d-228be389186e_1280x1600.jpeg",
-  "description": "Deliverance, Faith, and the Power of Beholding Jesus"
+  "description": "Deliverance, Faith, and the Power of Beholding Jesus",
+  "type": "newsletter"
  },
  {
   "slug": "when-love-disappoints",
@@ -525,7 +584,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/when-love-disappoints",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!vSYN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0224442-8f54-417b-bf30-896f88ca3089_1536x1024.png",
-  "description": "Why Jesus Refused to Become Who People Needed Him to Be"
+  "description": "Why Jesus Refused to Become Who People Needed Him to Be",
+  "type": "newsletter"
  },
  {
   "slug": "the-power-that-flows-to-the-fringe",
@@ -536,7 +596,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/the-power-that-flows-to-the-fringe",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!I11Y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb7be0c3b-e631-4084-a470-e2a510c082d7_1800x646.webp",
-  "description": "From the Tassel of Jesus to the Integrated Body of the Church"
+  "description": "From the Tassel of Jesus to the Integrated Body of the Church",
+  "type": "newsletter"
  },
  {
   "slug": "stop-chasing-the-snake",
@@ -547,7 +608,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/stop-chasing-the-snake",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!OpYI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d40452d-99aa-402a-8bdf-49416c0126c3_1024x1536.png",
-  "description": "On Healing, Justice, and the Wounds Only God Can Restore"
+  "description": "On Healing, Justice, and the Wounds Only God Can Restore",
+  "type": "newsletter"
  },
  {
   "slug": "knowing-about-god-or-actually-knowing",
@@ -558,7 +620,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/knowing-about-god-or-actually-knowing",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!fjUF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F80516140-61c1-4a55-9860-a21e87978171_1536x1024.png",
-  "description": "Intellectual and Sapiential Ways of Approaching the Living Truth"
+  "description": "Intellectual and Sapiential Ways of Approaching the Living Truth",
+  "type": "newsletter"
  },
  {
   "slug": "deliverance-without-fear-restore",
@@ -569,7 +632,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/deliverance-without-fear-restore",
   "cover_image": "https://substack-post-media.s3.amazonaws.com/public/images/5c64b69e-ceba-4f51-9954-67da55019657_626x532.png",
-  "description": "Why healing begins when the heart returns to Christ"
+  "description": "Why healing begins when the heart returns to Christ",
+  "type": "newsletter"
  },
  {
   "slug": "the-comfort-of-gathering-the-cost",
@@ -580,7 +644,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-comfort-of-gathering-the-cost",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!5O-e!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbdcb919e-cd64-4634-be6f-6078d934b88b_1298x995.jpeg",
-  "description": "SEEK and the Difference Between Consolation and Conversion"
+  "description": "SEEK and the Difference Between Consolation and Conversion",
+  "type": "newsletter"
  },
  {
   "slug": "turning-forty-in-the-wilderness",
@@ -591,7 +656,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/turning-forty-in-the-wilderness",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!zc8i!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7b9e39e-4bb0-494c-b54a-56bdd9d9087e_1024x1536.heic",
-  "description": "New Year's Day, an Inner Exodus, and AI Angels"
+  "description": "New Year's Day, an Inner Exodus, and AI Angels",
+  "type": "newsletter"
  },
  {
   "slug": "the-middle-is-not-failure",
@@ -602,7 +668,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-middle-is-not-failure",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!zyo1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd1144395-976b-4ab9-a1ed-74b66feea6de_1536x1024.png",
-  "description": "Why the in-between is not a mistake"
+  "description": "Why the in-between is not a mistake",
+  "type": "newsletter"
  },
  {
   "slug": "the-eve-effect",
@@ -613,7 +680,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-eve-effect",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!v2dJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff67dbb2b-cc44-4488-a839-c4732f0f783b_1536x1024.heic",
-  "description": "Why Men and Women Will Use Chatbots Differently—Without One Being “More Deceived”"
+  "description": "Why Men and Women Will Use Chatbots Differently—Without One Being “More Deceived”",
+  "type": "newsletter"
  },
  {
   "slug": "when-the-century-ran-out-a-screwtape",
@@ -624,7 +692,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-the-century-ran-out-a-screwtape",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!cxoE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8fb4f93a-c410-40aa-98c0-7d6f7e722d0f_1536x1024.heic",
-  "description": "A Screwtape Reflection on Technology, Time, and the Formation of the Modern Soul"
+  "description": "A Screwtape Reflection on Technology, Time, and the Formation of the Modern Soul",
+  "type": "newsletter"
  },
  {
   "slug": "the-master-chief-problem-why-christmas",
@@ -635,7 +704,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-master-chief-problem-why-christmas",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!d0kd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0bf98492-305d-4f53-9da4-c4724b693ed8_1536x1024.png",
-  "description": "Why becoming “more than human” may actually cost us our humanity"
+  "description": "Why becoming “more than human” may actually cost us our humanity",
+  "type": "newsletter"
  },
  {
   "slug": "becoming-people-of-the-heart",
@@ -646,7 +716,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/becoming-people-of-the-heart",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!I17M!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fca64d10c-04ef-4481-82d1-a41b76028e4f_1024x1024.png",
-  "description": "Why Information Will Never Replace Presence"
+  "description": "Why Information Will Never Replace Presence",
+  "type": "newsletter"
  },
  {
   "slug": "why-super-intelligence-whispers-before",
@@ -657,7 +728,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/why-super-intelligence-whispers-before",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!vn2C!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5462f0f8-7480-4149-bbfa-fd716fcb0848_1536x1024.png",
-  "description": "Why the future of AI will shape authority through conversation, not power"
+  "description": "Why the future of AI will shape authority through conversation, not power",
+  "type": "newsletter"
  },
  {
   "slug": "the-armor-of-god-vs-the-armor-of",
@@ -668,7 +740,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-armor-of-god-vs-the-armor-of",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!G-rU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd4180f5-6972-4818-8906-b1d80a04643e_1024x1024.png",
-  "description": "Why Perfect Self-Protection Will Become Our Spiritual Coffin"
+  "description": "Why Perfect Self-Protection Will Become Our Spiritual Coffin",
+  "type": "newsletter"
  },
  {
   "slug": "what-ai-can-never-heal",
@@ -679,7 +752,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/what-ai-can-never-heal",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!QXyk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F259adff2-a692-42fa-a488-36d252fe0b11_1024x1024.heic",
-  "description": "And Why You Can’t Therapy Your Way Out of Sin"
+  "description": "And Why You Can’t Therapy Your Way Out of Sin",
+  "type": "newsletter"
  },
  {
   "slug": "becoming-a-mystical-human-in-the",
@@ -690,7 +764,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/becoming-a-mystical-human-in-the",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!2IDR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc94c746a-6842-4085-bf11-afca06a9145b_800x533.png",
-  "description": "A hopeful guide for ordinary Catholics entering an extraordinary future."
+  "description": "A hopeful guide for ordinary Catholics entering an extraordinary future.",
+  "type": "newsletter"
  },
  {
   "slug": "superintelligence-already-walked",
@@ -701,7 +776,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/superintelligence-already-walked",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!8ctL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43b54bef-e17f-466f-aa30-6d0402886d6e_1024x1536.png",
-  "description": "Why No AI—No Matter How Powerful—Can Imitate the Wisdom of Jesus"
+  "description": "Why No AI—No Matter How Powerful—Can Imitate the Wisdom of Jesus",
+  "type": "newsletter"
  },
  {
   "slug": "free-audiobook-preview-hear-the-heart",
@@ -712,7 +788,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/free-audiobook-preview-hear-the-heart",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!tik6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9bfc9ea2-8ac3-49cd-8759-014f6e728365_532x426.jpeg",
-  "description": "Step into a new way of seeing spiritual warfare — rooted not in fear, but in the victory you already stand in."
+  "description": "Step into a new way of seeing spiritual warfare — rooted not in fear, but in the victory you already stand in.",
+  "type": "newsletter"
  },
  {
   "slug": "when-god-speaks-in-the-night",
@@ -723,7 +800,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-god-speaks-in-the-night",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!gkka!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda2e45ab-07d5-4498-bfed-5195adecc232_1536x1024.png",
-  "description": "On the Theology, Psychology, and Discernment of Dreams"
+  "description": "On the Theology, Psychology, and Discernment of Dreams",
+  "type": "newsletter"
  },
  {
   "slug": "thanksgiving-the-doorway-back-into",
@@ -734,7 +812,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/thanksgiving-the-doorway-back-into",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!CoCz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F603f9cdc-804d-4d96-b882-7ccfd7689ac6_1536x1024.png",
-  "description": "How Praise, Presence, and Humility Break the Grip of Anxiety"
+  "description": "How Praise, Presence, and Humility Break the Grip of Anxiety",
+  "type": "newsletter"
  },
  {
   "slug": "repentance-reordering-thanksgiving",
@@ -745,7 +824,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/repentance-reordering-thanksgiving",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!pE5z!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5562f939-47c8-4500-a164-25355d99e03c_1536x1024.png",
-  "description": "Cain and Abel, self-reliance, and the quiet return to God that changes how we see everything we already have."
+  "description": "Cain and Abel, self-reliance, and the quiet return to God that changes how we see everything we already have.",
+  "type": "newsletter"
  },
  {
   "slug": "when-our-tools-stop-working-the-holy",
@@ -756,7 +836,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-our-tools-stop-working-the-holy",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!Ktz7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F314830cb-a443-4e81-be4a-501bbb7f779d_1536x1024.png",
-  "description": "Reflections from my conversation with Matt Lozano on the Open Doors Podcast"
+  "description": "Reflections from my conversation with Matt Lozano on the Open Doors Podcast",
+  "type": "newsletter"
  },
  {
   "slug": "ai-anointing-and-the-fear-of-new",
@@ -767,7 +848,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/ai-anointing-and-the-fear-of-new",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!-NyP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f1725fe-5894-445f-bd81-9ec3d08d6baf_600x992.png",
-  "description": "Rethinking anointing, creativity, and worship in a changing world."
+  "description": "Rethinking anointing, creativity, and worship in a changing world.",
+  "type": "newsletter"
  },
  {
   "slug": "when-your-inner-life-feels-like-a",
@@ -778,7 +860,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-your-inner-life-feels-like-a",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!qTvS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99b8442d-eabb-457a-8adb-d0632ec1951c_1536x1024.png",
-  "description": "Why God often works most in the places that feel least “spiritual.”"
+  "description": "Why God often works most in the places that feel least “spiritual.”",
+  "type": "newsletter"
  },
  {
   "slug": "the-finger-of-god-and-the-little",
@@ -789,7 +872,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-finger-of-god-and-the-little",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!gras!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb205ea71-51fe-470c-a858-76763d8c2f5d_1024x1536.png",
-  "description": "What my daughter’s smallest requests reveal about the Holy Spirit’s gentle way of moving the human heart."
+  "description": "What my daughter’s smallest requests reveal about the Holy Spirit’s gentle way of moving the human heart.",
+  "type": "newsletter"
  },
  {
   "slug": "when-miracles-look-like-ai",
@@ -800,7 +884,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-miracles-look-like-ai",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!U318!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F78cce1b6-acae-4205-9060-3dfaacf1380a_1536x1024.png",
-  "description": "Holding on to wonder when every sign can be faked."
+  "description": "Holding on to wonder when every sign can be faked.",
+  "type": "newsletter"
  },
  {
   "slug": "when-truth-comes-from-the-wrong-mouth",
@@ -811,7 +896,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-truth-comes-from-the-wrong-mouth",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!Os7F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8006412d-0639-4afa-8f62-568d1cef6ec4_1536x1024.png",
-  "description": "How cognitive biases blind us to grace—and how the saints teach us to see again"
+  "description": "How cognitive biases blind us to grace—and how the saints teach us to see again",
+  "type": "newsletter"
  },
  {
   "slug": "the-god-who-mocks-death",
@@ -822,7 +908,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-god-who-mocks-death",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!x7c4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb7e86612-2f54-4ae3-86c9-a04edbaa0321_1536x1024.png",
-  "description": "How God Turned Death Into the Ultimate Punchline"
+  "description": "How God Turned Death Into the Ultimate Punchline",
+  "type": "newsletter"
  },
  {
   "slug": "the-devil-doesnt-own-halloween",
@@ -833,7 +920,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-devil-doesnt-own-halloween",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!OBuI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffbc0f1ca-15b8-4509-bfae-68446ab091ef_1536x1024.png",
-  "description": "Prophetic souling and the authority we forgot"
+  "description": "Prophetic souling and the authority we forgot",
+  "type": "newsletter"
  },
  {
   "slug": "gallows-humor-and-the-god-who-laughs",
@@ -844,7 +932,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/gallows-humor-and-the-god-who-laughs",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!zVBF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0ecda54-1e64-4e3a-8eb8-7a07c2669aba_1536x1024.png",
-  "description": "Why Jesus — and the Irish — teach us how to survive sorrow with joy"
+  "description": "Why Jesus — and the Irish — teach us how to survive sorrow with joy",
+  "type": "newsletter"
  },
  {
   "slug": "youre-already-catholic-you-just-dont",
@@ -855,7 +944,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/youre-already-catholic-you-just-dont",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!lk9B!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6df8ab99-2e9f-433f-968d-5f6556fddf17_1536x1024.png",
-  "description": "Why there’s only one Body (and you’re in it)"
+  "description": "Why there’s only one Body (and you’re in it)",
+  "type": "newsletter"
  },
  {
   "slug": "when-people-say-the-rosary-is-sorcery",
@@ -866,7 +956,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-people-say-the-rosary-is-sorcery",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!8_XF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06bc1a59-f462-4076-b58f-9aecb974819b_1536x1024.png",
-  "description": "How my last post triggered a wave of comments about “Mary worship” — and why I’m actually grateful for it."
+  "description": "How my last post triggered a wave of comments about “Mary worship” — and why I’m actually grateful for it.",
+  "type": "newsletter"
  },
  {
   "slug": "the-rosary-gods-love-in-beads-and",
@@ -877,7 +968,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-rosary-gods-love-in-beads-and",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!zMyy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5cb0ec94-90cb-4fb5-94ed-ee2228933f49_1536x1024.png",
-  "description": "How a simple prayer became Scripture in motion — and a maternal instrument of the Spirit"
+  "description": "How a simple prayer became Scripture in motion — and a maternal instrument of the Spirit",
+  "type": "newsletter"
  },
  {
   "slug": "the-grace-of-being-wrong-and-the",
@@ -888,7 +980,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-grace-of-being-wrong-and-the",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!xD1J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffa2dcffd-261b-448a-86a9-9bd49c55baa3_1536x1024.png",
-  "description": "Apparently Not a Heretic—Just Bad at Hebrew"
+  "description": "Apparently Not a Heretic—Just Bad at Hebrew",
+  "type": "newsletter"
  },
  {
   "slug": "written-from-the-beginning",
@@ -899,7 +992,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/written-from-the-beginning",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!jjNa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9df0962e-1c18-4734-96ab-079f6fc0292b_1024x606.png",
-  "description": "The first word of Scripture encodes the Cross—letter by letter"
+  "description": "The first word of Scripture encodes the Cross—letter by letter",
+  "type": "newsletter"
  },
  {
   "slug": "the-enneagram-from-a-catholic-perspective",
@@ -910,7 +1004,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-enneagram-from-a-catholic-perspective",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!hxY-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fff17c03e-42d8-44c5-aed5-ea102508a599_1536x1024.png",
-  "description": "How Catholics can wisely evaluate popular personality tools in light of their faith"
+  "description": "How Catholics can wisely evaluate popular personality tools in light of their faith",
+  "type": "newsletter"
  },
  {
   "slug": "clickbait-for-the-kingdom",
@@ -921,7 +1016,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/clickbait-for-the-kingdom",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!BCYU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94d712a5-1928-4d35-985e-c910a20d2cf4_1536x1024.png",
-  "description": "Fishers of men in a world of algorithms"
+  "description": "Fishers of men in a world of algorithms",
+  "type": "newsletter"
  },
  {
   "slug": "when-control-masquerades-as-connection",
@@ -932,7 +1028,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-control-masquerades-as-connection",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!jAaq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F64ab6194-cd31-4741-bd19-cf533e46ec98_1536x1024.png",
-  "description": "Safety, surrender, and what happens when we mistake control for connection."
+  "description": "Safety, surrender, and what happens when we mistake control for connection.",
+  "type": "newsletter"
  },
  {
   "slug": "the-error-of-our-life",
@@ -943,7 +1040,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-error-of-our-life",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!-L9-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F53183dcf-85fa-430a-bac1-6b24bf894af6_1024x506.png",
-  "description": "Why Holiness Offends and Comfort Deceives"
+  "description": "Why Holiness Offends and Comfort Deceives",
+  "type": "newsletter"
  },
  {
   "slug": "when-your-bones-dry-up-the-biblical",
@@ -954,7 +1052,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-your-bones-dry-up-the-biblical",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!h240!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F910b5c6f-65a8-43ba-8bef-999c18a98f0b_1536x1024.heic",
-  "description": "Why Inner Despair Weighs Heavier Than Sickness—and Where God Meets Us There"
+  "description": "Why Inner Despair Weighs Heavier Than Sickness—and Where God Meets Us There",
+  "type": "newsletter"
  },
  {
   "slug": "st-michael-and-the-anchor-of-identity",
@@ -965,7 +1064,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/st-michael-and-the-anchor-of-identity",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!cENS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2a8946-7b44-43ed-9030-0a7cdc2e0e76_1536x1024.png",
-  "description": "Who is like God?"
+  "description": "Who is like God?",
+  "type": "newsletter"
  },
  {
   "slug": "kingdom-medicine",
@@ -976,7 +1076,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/kingdom-medicine",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!xM0g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F91696898-f79b-47fb-8e29-98fcfb8bdedb_1536x1024.jpeg",
-  "description": "Where Medicine and Miracles Meet"
+  "description": "Where Medicine and Miracles Meet",
+  "type": "newsletter"
  },
  {
   "slug": "get-behind-me-satan",
@@ -987,7 +1088,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/get-behind-me-satan",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!Pg67!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7eae2019-113c-48a4-99f9-04776d758ad0_1920x1382.png",
-  "description": "When Your Reasoning Turns Against God"
+  "description": "When Your Reasoning Turns Against God",
+  "type": "newsletter"
  },
  {
   "slug": "the-god-we-imagine",
@@ -998,7 +1100,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-god-we-imagine",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!5fss!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f4e059c-ae19-4255-ac6c-7b8028e521a8_1536x1024.png",
-  "description": "When Lies Become Bondage"
+  "description": "When Lies Become Bondage",
+  "type": "newsletter"
  },
  {
   "slug": "why-i-plan-on-being-unemployed-when",
@@ -1009,7 +1112,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/why-i-plan-on-being-unemployed-when",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!jyj2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9807aa86-03b3-4de4-b659-785cf17d2f55_1536x1024.png",
-  "description": "When Healing Isn't a Full-Time Job"
+  "description": "When Healing Isn't a Full-Time Job",
+  "type": "newsletter"
  },
  {
   "slug": "when-jesus-said-cut-it-offand-what",
@@ -1020,7 +1124,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-jesus-said-cut-it-offand-what",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!9KoY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bafcc2b-9a39-4e69-9819-03484e5fc76b_1536x1024.png",
-  "description": "The Most Misunderstood Line Jesus Ever Spoke"
+  "description": "The Most Misunderstood Line Jesus Ever Spoke",
+  "type": "newsletter"
  },
  {
   "slug": "we-chase-snakes-instead-of-treating",
@@ -1031,7 +1136,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/we-chase-snakes-instead-of-treating",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!HWUZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54733085-3684-4825-969c-59ac46c5094c_1500x1000.jpeg",
-  "description": "Why We Don't Heal from the Pain of Being Wounded—and How God Offers the Anti-Venom"
+  "description": "Why We Don't Heal from the Pain of Being Wounded—and How God Offers the Anti-Venom",
+  "type": "newsletter"
  },
  {
   "slug": "from-wizards-to-prophets",
@@ -1042,7 +1148,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/from-wizards-to-prophets",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!ux8E!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66c08445-50a5-43e3-aa41-e233b314ec92_1029x583.png",
-  "description": "Why the Supernatural Story Matters"
+  "description": "Why the Supernatural Story Matters",
+  "type": "newsletter"
  },
  {
   "slug": "when-demonic-manifestations-signal",
@@ -1053,7 +1160,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/when-demonic-manifestations-signal",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!xvUk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F511b43d4-8ab2-46bd-a105-380501007199_818x500.jpeg",
-  "description": "Why the early Church saw demonic manifestations as a lack of faith, not a show of power"
+  "description": "Why the early Church saw demonic manifestations as a lack of faith, not a show of power",
+  "type": "newsletter"
  },
  {
   "slug": "when-demons-tell-our-story",
@@ -1064,7 +1172,8 @@
   "paid": false,
   "url": "https://drseantobin.substack.com/p/when-demons-tell-our-story",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!9YdT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a85cde0-26dc-4579-b154-48a5bf2a579d_983x553.jpeg",
-  "description": "Why Wounds Are Their Favorite Language"
+  "description": "Why Wounds Are Their Favorite Language",
+  "type": "newsletter"
  },
  {
   "slug": "cleansing-and-protection-prayers",
@@ -1075,7 +1184,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/cleansing-and-protection-prayers",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!Qfh5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41aa59c4-ef92-41ef-bf76-4145e599a1cd_1024x768.jpeg",
-  "description": "Repositioned in Christ, Not Ruled by Fear"
+  "description": "Repositioned in Christ, Not Ruled by Fear",
+  "type": "newsletter"
  },
  {
   "slug": "are-other-peoples-prayers-dangerous",
@@ -1086,7 +1196,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/are-other-peoples-prayers-dangerous",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!yL_5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63e9c5bc-0b59-4591-b715-75b43d796e06_1946x1946.jpeg",
-  "description": "Reframing Spiritual Boundaries Without Fear"
+  "description": "Reframing Spiritual Boundaries Without Fear",
+  "type": "newsletter"
  },
  {
   "slug": "black-magic-coffee-and-the-conscience",
@@ -1097,7 +1208,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/black-magic-coffee-and-the-conscience",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!vlfG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F69dc07aa-45f6-4466-9461-3b9ad2177bad_1319x1319.heic",
-  "description": "Discernment in a World of Spiritual Mimicry"
+  "description": "Discernment in a World of Spiritual Mimicry",
+  "type": "newsletter"
  },
  {
   "slug": "the-war-is-won-why-big-god-little",
@@ -1108,7 +1220,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-war-is-won-why-big-god-little",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!kXMz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46c8665e-a575-45ef-bb3b-c100c58f35f4_850x1322.png",
-  "description": "The enemy is disarmed. Victory is assured. So why are so many Christians still living in fear?"
+  "description": "The enemy is disarmed. Victory is assured. So why are so many Christians still living in fear?",
+  "type": "newsletter"
  },
  {
   "slug": "the-ritual-got-it-wrongand-we-still",
@@ -1119,7 +1232,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-ritual-got-it-wrongand-we-still",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!q_NF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d7bc173-c577-441d-b5fe-44462a1f1eb7_1000x1000.jpeg",
-  "description": "How We Misuse the Rite of Exorcism"
+  "description": "How We Misuse the Rite of Exorcism",
+  "type": "newsletter"
  },
  {
   "slug": "not-cowering-but-conviction",
@@ -1130,7 +1244,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/not-cowering-but-conviction",
   "cover_image": "https://substack-post-media.s3.amazonaws.com/public/images/d5d360df-928d-4c4e-b9f0-49e8e25a7f8b_1536x1024.png",
-  "description": "Rethinking the Fear of the Lord"
+  "description": "Rethinking the Fear of the Lord",
+  "type": "newsletter"
  },
  {
   "slug": "renunciation-in-deliverance-ministry",
@@ -1141,7 +1256,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/renunciation-in-deliverance-ministry",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!NwbN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3db48a81-ff55-4730-99b8-f831daca03d8_760x427.jpeg",
-  "description": "Finding the Heart of Freedom"
+  "description": "Finding the Heart of Freedom",
+  "type": "newsletter"
  },
  {
   "slug": "impartation",
@@ -1152,7 +1268,8 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/impartation",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!SuCs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F927d490a-4841-4bec-9e0b-f9155f8a7af6_1280x720.png",
-  "description": "Recovering a Charismatic Grace in Catholic Tradition"
+  "description": "Recovering a Charismatic Grace in Catholic Tradition",
+  "type": "newsletter"
  },
  {
   "slug": "the-irony-in-fr-rippergers-view-on",
@@ -1163,6 +1280,7 @@
   "paid": true,
   "url": "https://drseantobin.substack.com/p/the-irony-in-fr-rippergers-view-on",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!eGIW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9939eb82-197d-43d0-a2ce-ae20042026fb_1028x1028.jpeg",
-  "description": "A Cycle of Emotional Reasoning and Superstition"
+  "description": "A Cycle of Emotional Reasoning and Superstition",
+  "type": "newsletter"
  }
 ]
