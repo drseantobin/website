@@ -312,7 +312,7 @@ def build_home():
 </section>
 
 <section class="cta-band">
-  <h2>Make the exodus with us.</h2>
+  <h2>Journey with me.</h2>
   <p>One or two essays a week on faith, psychology, and staying human in the age of AI. Free to read, with paid subscribers going deeper.</p>
   <a class="btn btn-gold" href="{esc(SITE['subscribe_url'])}" target="_blank" rel="noopener">Subscribe to The Inner Exodus</a>
 </section>
