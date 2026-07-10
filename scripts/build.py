@@ -222,7 +222,8 @@ def person_jsonld():
             "Attention and the interior life",
             "Spiritual warfare and deliverance ministry",
         ],
-        "sameAs": [u for u in SITE.get("socials", {}).values() if u],
+        "sameAs": [u for u in SITE.get("socials", {}).values() if u]
+                  + ([SITE["author_page"]] if SITE.get("author_page") else []),
         "author": books,
     }
     return ('<script type="application/ld+json">\n'
@@ -822,6 +823,7 @@ attention, and artificial intelligence.
 
 - [The Inner Exodus on Substack]({SITE['substack_url']}): essays first appear here
 - [Essay RSS feed]({RSS_URL})
+- [Amazon author page]({SITE.get('author_page', BASE + '/books/')})
 {socials_md}
 
 ## Contact
