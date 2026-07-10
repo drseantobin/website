@@ -646,7 +646,7 @@ def build_about():
     body = f"""
 <section class="page-head">
   <p class="eyebrow">About</p>
-  <h1>Man fully alive.</h1>
+  <h1>Hello, I'm Sean.</h1>
 </section>
 <section class="section"><div class="post-body about-bio">{bio}</div>
 <div class="pillars">{pillars}</div></section>
