@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 .github/workflows/deploy.yml
 assets/covers/src/
+ops-sync.log
