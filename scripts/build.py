@@ -182,6 +182,52 @@ def social_tiles():
 CSS_VERSION = hashlib.md5((ASSETS / "style.css").read_bytes()).hexdigest()[:8]
 
 
+def person_jsonld():
+    """schema.org Person entity (JSON-LD) — machine-readable identity for
+    search engines and AI agents. Generated from site_data.json so it stays
+    in sync with socials and the book list."""
+    base = f"https://{SITE['domain']}"
+    person_id = f"{base}/#person"
+    books = []
+    for b in DATA.get("books", []):
+        book = {
+            "@type": "Book",
+            "name": b["title"],
+            "description": b.get("subtitle") or b.get("description", ""),
+            "author": {"@id": person_id},
+        }
+        if b.get("isbn"):
+            book["isbn"] = b["isbn"]
+        if b.get("amazon_url"):
+            book["url"] = b["amazon_url"]
+        books.append(book)
+    person = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": person_id,
+        "name": "Sean Tobin",
+        "alternateName": "Dr. Sean Tobin",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "Psy.D.",
+        "jobTitle": "Clinical Psychologist",
+        "description": SITE["intro"],
+        "url": base,
+        "image": f"{base}/assets/sean-portrait.jpg",
+        "knowsAbout": [
+            "Clinical psychology",
+            "Human formation and artificial intelligence",
+            "Catholic spirituality",
+            "Attention and the interior life",
+            "Spiritual warfare and deliverance ministry",
+        ],
+        "sameAs": [u for u in SITE.get("socials", {}).values() if u],
+        "author": books,
+    }
+    return ('<script type="application/ld+json">\n'
+            + json.dumps(person, indent=1, ensure_ascii=False)
+            + "\n</script>")
+
+
 def page(title, body, *, active="", depth=0, description=""):
     r = "../" * depth
     nav_items = [("Writing", "writing/"), ("Books", "books/"), ("Podcast", "podcast/"),
@@ -209,6 +255,7 @@ def page(title, body, *, active="", depth=0, description=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}assets/style.css?v={CSS_VERSION}">
+{person_jsonld()}
 </head>
 <body>
 <header class="topbar">
