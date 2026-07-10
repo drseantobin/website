@@ -528,6 +528,20 @@ def build_posts():
         cover = f'<div class="post-cover" style="background-image:url(\'{esc(meta["cover_image"])}\')"></div>' if meta["cover_image"] else ""
         badge = (f'<a class="badge badge-paid badge-link" href="{esc(SITE["subscribe_url"])}" '
                  f'target="_blank" rel="noopener" title="For paid subscribers of The Inner Exodus. Click to unlock.">Paid subscribers</a>') if paid else ""
+        cat = CATS.get(slug, "")
+        related = [m for m in INDEX if m["slug"] != slug and cat and CATS.get(m["slug"]) == cat][:3]
+        if len(related) < 3:
+            seen = {slug} | {m["slug"] for m in related}
+            related += [m for m in INDEX if m["slug"] not in seen][:3 - len(related)]
+        related_html = ""
+        if related:
+            rel_cards = "".join(post_card(m, 2) for m in related)
+            related_html = f"""
+<section class="section">
+  <div class="section-head"><p class="eyebrow">Keep reading</p><h2>Related essays</h2>
+  <a class="section-more" href="../../writing/">All essays →</a></div>
+  <div class="card-grid">{rel_cards}</div>
+</section>"""
         body = f"""
 <article class="post">
   <header class="page-head">
@@ -538,6 +552,7 @@ def build_posts():
   {cover}
   {body_content}
 </article>
+{related_html}
 """
         post_ld = {
             "@context": "https://schema.org",
