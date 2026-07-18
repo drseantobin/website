@@ -109,6 +109,43 @@ def sanitize(body_html):
     return "".join(s.out)
 
 
+def strip_leading_top_image(body_html, has_cover):
+    """Drop Substack's body copy of a post cover when the template shows it."""
+    if not has_cover:
+        return body_html
+
+    start = re.match(
+        r'\s*<div\b[^>]*class="[^"]*\bcaptioned-image-container\b[^"]*"[^>]*>',
+        body_html,
+        re.I,
+    )
+    if not start:
+        return body_html
+
+    depth = 0
+    end = None
+    for tag in re.finditer(r'</?div\b[^>]*>', body_html[start.start():], re.I):
+        if tag.group(0).lower().startswith("</"):
+            depth -= 1
+            if depth == 0:
+                end = start.start() + tag.end()
+                break
+        else:
+            depth += 1
+
+    if end is None:
+        return body_html
+
+    block = body_html[start.start():end]
+    is_substack_top_image = re.search(
+        r'(?:&quot;|")topImage(?:&quot;|")\s*:\s*true', block, re.I
+    )
+    if not is_substack_top_image:
+        return body_html
+
+    return body_html[:start.start()] + body_html[end:]
+
+
 def teaser(body_html, max_chars=700, max_blocks=5):
     """First few top-level blocks of a sanitized body, for paid previews."""
     blocks = re.findall(r"<(?:p|h[1-6]|blockquote|div class=\"captioned-image-container\").*?>.*?</(?:p|h[1-6]|blockquote|div)>", body_html, re.S)
@@ -505,6 +542,7 @@ def build_posts():
             continue
         post = json.loads(f.read_text())
         clean = sanitize(post.get("body_html") or "")
+        clean = strip_leading_top_image(clean, bool(meta.get("cover_image")))
         paid = meta["paid"]
         if paid:
             body_content = f"""
