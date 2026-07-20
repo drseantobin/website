@@ -19,6 +19,7 @@ attention, and artificial intelligence.
 
 ## Essays
 
+- [The Age of the Digital Butler](https://drseantobin.ca/writing/the-age-of-the-digital-butler/): AI agents are giving ordinary people the power of an organization. They cannot tell us what that power is for.
 - [The Rise of AI Agents](https://drseantobin.ca/writing/the-age-of-ai-agents-has-begun/): The biggest shift in artificial intelligence isn’t better chat. It’s autonomous work.
 - [The Myth of Demonic Rights](https://drseantobin.ca/writing/the-myth-of-demonic-rights/): Why the Gospel destroys the legal framework behind modern deliverance ministry.
 - [The Question Is the Skill](https://drseantobin.ca/writing/stop-asking-ai-like-its-google/): Why the people who thrive with AI won’t have better models. They’ll have better minds.

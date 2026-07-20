@@ -1,5 +1,17 @@
 [
  {
+  "slug": "the-age-of-the-digital-butler",
+  "title": "The Age of the Digital Butler",
+  "subtitle": "AI agents are giving ordinary people the power of an organization. They cannot tell us what that power is for.",
+  "date": "2026-07-19",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/the-age-of-the-digital-butler",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!3u19!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb3f6c0f9-f9df-4a82-bc4f-b83a9bd6fbbb_1672x941.png",
+  "description": "AI agents are giving ordinary people the power of an organization. They cannot tell us what that power is for.",
+  "type": "newsletter"
+ },
+ {
   "slug": "the-age-of-ai-agents-has-begun",
   "title": "The Rise of AI Agents",
   "subtitle": "The biggest shift in artificial intelligence isn’t better chat. It’s autonomous work.",
