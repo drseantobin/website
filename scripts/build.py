@@ -13,6 +13,8 @@ import shutil
 from html.parser import HTMLParser
 from pathlib import Path
 
+from category import infer_category
+
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 PUBLIC = ROOT / "docs"  # GitHub Pages serves from main:/docs
@@ -342,7 +344,7 @@ def post_card(p, depth):
     badge = '<span class="badge badge-paid">Paid subscribers</span>' if p["paid"] else ""
     img = f'<div class="card-img" style="background-image:url(\'{esc(p["cover_image"])}\')"></div>' if p["cover_image"] else '<div class="card-img card-img-empty"></div>'
     sub = esc(p["subtitle"] or p["description"] or "")
-    cat = CATS.get(p["slug"], "")
+    cat = post_category(p)
     blob = esc((p["title"] + " " + (p.get("subtitle") or "") + " " + (p.get("description") or "")).lower())
     chip = f'<span class="cat-chip">{esc(cat)}</span>' if cat else ""
     return f"""<a class="post-card" data-cat="{esc(cat)}" data-search="{blob}" href="{r}writing/{esc(p['slug'])}/">
@@ -351,9 +353,14 @@ def post_card(p, depth):
     <p class="card-date">{fmt_date(p['date'])} {badge}</p>
     <h3>{esc(p['title'])}</h3>
     <p class="card-sub">{sub}</p>
-    {chip}
+{chip}
   </div>
 </a>"""
+
+
+def post_category(post):
+    """Use editorial assignments first, with a safe automatic fallback."""
+    return CATS.get(post["slug"]) or infer_category(post)
 
 
 def build_home():
@@ -500,7 +507,7 @@ def build_writing_index():
     n_free = sum(1 for p in INDEX if not p["paid"])
     counts = {}
     for p in INDEX:
-        c = CATS.get(p["slug"], "")
+        c = post_category(p)
         if c:
             counts[c] = counts.get(c, 0) + 1
     pills = f'<button class="cat-pill active" data-cat="all">All <span>{len(posts)}</span></button>'
@@ -567,8 +574,8 @@ def build_posts():
         cover = f'<div class="post-cover" style="background-image:url(\'{esc(meta["cover_image"])}\')"></div>' if meta["cover_image"] else ""
         badge = (f'<a class="badge badge-paid badge-link" href="{esc(SITE["subscribe_url"])}" '
                  f'target="_blank" rel="noopener" title="For paid subscribers of The Inner Exodus. Click to unlock.">Paid subscribers</a>') if paid else ""
-        cat = CATS.get(slug, "")
-        related = [m for m in INDEX if m["slug"] != slug and cat and CATS.get(m["slug"]) == cat][:3]
+        cat = post_category({**meta, **post})
+        related = [m for m in INDEX if m["slug"] != slug and cat and post_category(m) == cat][:3]
         if len(related) < 3:
             seen = {slug} | {m["slug"] for m in related}
             related += [m for m in INDEX if m["slug"] not in seen][:3 - len(related)]

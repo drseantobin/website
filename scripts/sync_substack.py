@@ -12,10 +12,13 @@ import time
 import urllib.request
 from pathlib import Path
 
+from category import infer_category
+
 BASE = "https://drseantobin.substack.com"
 ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "content" / "posts"
 INDEX_FILE = ROOT / "content" / "posts_index.json"
+CATEGORIES_FILE = ROOT / "content" / "categories.json"
 
 HEADERS = {"User-Agent": "drseantobin.ca site sync (owner: seantobin.psyd@gmail.com)"}
 
@@ -52,6 +55,14 @@ def main():
     archive = fetch_archive()
     print(f"archive: {len(archive)} posts")
 
+    categories = json.loads(CATEGORIES_FILE.read_text()) if CATEGORIES_FILE.exists() else {
+        "categories": [
+            "AI & Being Human", "Deliverance & Spiritual Warfare", "The Interior Life",
+            "Psychology & Healing", "Church & Culture",
+        ],
+        "assignments": {},
+    }
+    assignments = categories.setdefault("assignments", {})
     index = []
     fetched = skipped = 0
     for meta in archive:
@@ -69,6 +80,10 @@ def main():
             "type": meta.get("type", "newsletter"),
         }
         index.append(entry)
+        if slug not in assignments:
+            # Archive metadata is enough to categorize unchanged posts; a
+            # full body fetch is only needed for genuinely new posts.
+            assignments[slug] = infer_category(entry)
 
         out = POSTS_DIR / f"{slug}.json"
         if out.exists() and not force:
@@ -95,6 +110,7 @@ def main():
         print(f"  + {entry['date']} [{'PAID' if entry['paid'] else 'free'}] {entry['title']}")
         time.sleep(0.4)
 
+    CATEGORIES_FILE.write_text(json.dumps(categories, ensure_ascii=False, indent=2) + "\n")
     INDEX_FILE.write_text(json.dumps(index, ensure_ascii=False, indent=1))
     print(f"done: {fetched} fetched, {skipped} unchanged, index={len(index)}")
 
