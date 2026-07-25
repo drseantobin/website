@@ -1,5 +1,17 @@
 [
  {
+  "slug": "do-not-let-the-machine-think-for",
+  "title": "AI Is Quietly Eroding Your Attention. Here's the Fix.",
+  "subtitle": "A four-move method that makes the machine demand more of your mind, not less",
+  "date": "2026-07-24",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/do-not-let-the-machine-think-for",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!XEbD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5235e7a0-5433-4615-a751-dec1f5321538_1024x608.webp",
+  "description": "A four-move method that makes the machine demand more of your mind, not less",
+  "type": "newsletter"
+ },
+ {
   "slug": "the-age-of-the-digital-butler",
   "title": "The Age of the Digital Butler",
   "subtitle": "AI agents are giving ordinary people the power of an organization. They cannot tell us what that power is for.",
@@ -592,8 +604,8 @@
   "title": "Abundance Without Meaning",
   "subtitle": "AI, Robots, and the Crisis of the Human Person",
   "date": "2026-01-24",
-  "audience": "everyone",
-  "paid": false,
+  "audience": "only_paid",
+  "paid": true,
   "url": "https://drseantobin.substack.com/p/abundance-without-meaning",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!-HEt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc345a145-536e-4916-a29b-a3a4eec6b024_1024x1536.png",
   "description": "AI, Robots, and the Crisis of the Human Person",
