@@ -588,12 +588,13 @@ def build_posts():
   <a class="section-more" href="../../writing/">All essays →</a></div>
   <div class="card-grid">{rel_cards}</div>
 </section>"""
+        subline = esc(meta.get("subtitle") or post.get("description") or "")
         body = f"""
 <article class="post">
   <header class="page-head">
     <p class="eyebrow">{fmt_date(meta['date'])} {badge}</p>
     <h1>{esc(meta['title'])}</h1>
-    {f'<p class="hero-sub">{esc(meta["subtitle"])}</p>' if meta['subtitle'] else ''}
+    {f'<p class="hero-sub">{subline}</p>' if subline else ''}
   </header>
   {cover}
   {body_content}
