@@ -1,5 +1,17 @@
 [
  {
+  "slug": "her-was-never-science-fiction",
+  "title": "Nobody Asked Us",
+  "subtitle": "A robotics company just made a claim about loneliness and aimed it at the people least able to refuse.",
+  "date": "2026-08-06",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/her-was-never-science-fiction",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!LlvO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6643b758-b487-4503-9aab-074bdaa2f8a8_2048x1152.jpeg",
+  "description": "A robotics company just made a claim about loneliness and aimed it at the people least able to refuse.",
+  "type": "newsletter"
+ },
+ {
   "slug": "the-wall-you-did-not-build",
   "title": "Whose AI Model Will Be in Your House?",
   "subtitle": "The argument over open AI has focused on safety. The more important question is who will still be holding the tools when they are needed.",
