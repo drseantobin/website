@@ -55,7 +55,16 @@
    "amazon_url": "https://www.amazon.com/dp/B0H7SJRZM5",
    "cover": "assets/covers/remaining-human.jpg",
    "formats": "Paperback · Kindle",
-   "badge": "New"
+   "badge": "New",
+   "slug": "remaining-human",
+   "assessment_url": "https://drseantobin.github.io/remaining-human/",
+   "long": [
+    "Remaining Human is my plain-language companion to Magnifica Humanitas, Pope Leo XIV's encyclical on artificial intelligence. I am Dr. Sean Tobin, a clinical psychologist and Catholic author. The Church has spoken directly into what these machines are doing to us, and most people will never read the document. This book opens it up: what the Holy Father actually says, why he says it, and what it asks of an ordinary person living half their life through a screen. Available in paperback and Kindle.",
+    "The book follows the encyclical's own concerns: what AI is doing to attention, to desire, and to the soul. And what the Church means when she calls us to remain fully human while all of it arrives. No academic apparatus, no tech panic. A clear walk through a document written for people who are already living inside what it describes.",
+    "I wrote it as a clinical psychologist and a Catholic author, because that is the seam this shift runs along: the human person on one side, the machine on the other. The encyclical deserves to be opened up rather than summarized away. And what it asks is harder and simpler than a position on technology. It asks you to stay a person while you use it."
+   ],
+   "assessment_heading": "Take the Remaining Human self-check.",
+   "assessment_text": "A free, browser-based measure of your current performance on established cognitive tasks, and how well-calibrated your confidence is against your actual accuracy."
   },
   {
    "title": "Big God, Little Devil",
