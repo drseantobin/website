@@ -239,15 +239,19 @@ def person_jsonld():
         }
         if b.get("isbn"):
             book["isbn"] = b["isbn"]
-        if b.get("amazon_url"):
+        if b.get("slug"):
+            book["url"] = f"{base}/books/{b['slug']}/"
+            if b.get("amazon_url"):
+                book["sameAs"] = b["amazon_url"]
+        elif b.get("amazon_url"):
             book["url"] = b["amazon_url"]
         books.append(book)
     person = {
         "@context": "https://schema.org",
         "@type": "Person",
         "@id": person_id,
-        "name": "Sean Tobin",
-        "alternateName": "Dr. Sean Tobin",
+        "name": "Dr. Sean Tobin",
+        "alternateName": "Sean Tobin",
         "honorificPrefix": "Dr.",
         "honorificSuffix": "Psy.D.",
         "jobTitle": "Clinical Psychologist",
@@ -435,8 +439,15 @@ def build_home():
 
 def book_card(b, depth=0):
     r = "../" * depth
-    link_open = f'<a class="book-card" href="{esc(b["amazon_url"])}" target="_blank" rel="noopener">' if b["amazon_url"] else '<div class="book-card">'
-    link_close = "</a>" if b["amazon_url"] else "</div>"
+    if b.get("slug"):
+        link_open = f'<a class="book-card" href="{r}books/{esc(b["slug"])}/">'
+        link_close = "</a>"
+    elif b["amazon_url"]:
+        link_open = f'<a class="book-card" href="{esc(b["amazon_url"])}" target="_blank" rel="noopener">'
+        link_close = "</a>"
+    else:
+        link_open = '<div class="book-card">'
+        link_close = "</div>"
     badge = f'<span class="badge badge-gold">{esc(b["badge"])}</span>' if b.get("badge") else ""
     cover = b.get("cover", "")
     if cover:
@@ -445,7 +456,12 @@ def book_card(b, depth=0):
     else:
         cover_inner = f'<div class="book-cover-type"><span>{esc(b["title"])}</span></div>'
     cover_el = f'<div class="book-stage">{cover_inner}</div>'
-    cta = '<span class="listen-more">Buy on Amazon →</span>' if b["amazon_url"] else '<span class="card-date">Coming soon</span>'
+    if b.get("slug"):
+        cta = '<span class="listen-more">About the book →</span>'
+    elif b["amazon_url"]:
+        cta = '<span class="listen-more">Buy on Amazon →</span>'
+    else:
+        cta = '<span class="card-date">Coming soon</span>'
     return f"""{link_open}
   {cover_el}
   <div class="card-body">
@@ -639,6 +655,75 @@ def build_books():
     write("books/index.html", page("Books · Dr. Sean Tobin", body, active="Books", depth=1, path="books/"))
 
 
+def build_book_pages():
+    """Standalone page per book that has a slug — the entity home search and
+    answer engines can cite (an Amazon listing can't be that). Copy comes from
+    the book's "long" paragraphs in site_data.json."""
+    person_id = f"{BASE}/#person"
+    for b in DATA["books"]:
+        slug = b.get("slug")
+        if not slug:
+            continue
+        path = f"books/{slug}/"
+        cover = b.get("cover", "")
+        if cover:
+            cover3d = cover.replace("covers/", "covers/3d/").rsplit(".", 1)[0] + ".png"
+            cover_el = (f'<div class="book-stage" style="max-width:300px;margin:0 auto 2rem">'
+                        f'<img class="book-3d" src="../../{esc(cover3d)}" alt="{esc(b["title"])} cover"></div>')
+        else:
+            cover_el = ""
+        paras = "".join(f"<p>{esc(t)}</p>" for t in b.get("long", []))
+        buy = (f'<a class="btn btn-gold" href="{esc(b["amazon_url"])}" target="_blank" rel="noopener">Buy on Amazon</a>'
+               if b.get("amazon_url") else "")
+        assess = ""
+        if b.get("assessment_url"):
+            assess = f"""
+<section class="cta-band">
+  <h2>{esc(b.get("assessment_heading", "Take the " + b["title"] + " self-check."))}</h2>
+  <p>{esc(b.get("assessment_text", ""))}</p>
+  <div class="hero-ctas" style="justify-content:center">
+    <a class="btn btn-gold" href="{esc(b["assessment_url"])}" target="_blank" rel="noopener">Try it free</a>
+  </div>
+</section>"""
+        body = f"""
+<section class="page-head">
+  <p class="eyebrow">Books</p>
+  <h1>{esc(b['title'])}</h1>
+  <p class="hero-sub">{esc(b.get('subtitle', ''))}</p>
+</section>
+<section class="section">
+  {cover_el}
+  <div class="post-body about-bio">{paras}</div>
+  <div class="hero-ctas" style="justify-content:center">
+    {buy}
+    <a class="btn btn-ghost" href="../../writing/">Read the essays</a>
+  </div>
+  <p class="card-date" style="text-align:center;margin-top:1rem">{esc(b.get('formats', ''))}</p>
+</section>
+{assess}"""
+        book_ld = {
+            "@context": "https://schema.org",
+            "@type": "Book",
+            "name": b["title"],
+            "alternativeHeadline": b.get("subtitle", ""),
+            "description": b.get("description", ""),
+            "url": f"{BASE}/{path}",
+            "author": {"@id": person_id},
+            "inLanguage": "en",
+        }
+        if b.get("amazon_url"):
+            book_ld["sameAs"] = b["amazon_url"]
+        if cover:
+            book_ld["image"] = f"{BASE}/{cover}"
+        extra = ('<script type="application/ld+json">\n'
+                 + json.dumps(book_ld, indent=1, ensure_ascii=False)
+                 + "\n</script>")
+        write(f"{path}index.html",
+              page(f"{b['title']} · Dr. Sean Tobin", body, active="Books", depth=2,
+                   description=b.get("description", ""), path=path, og_type="book",
+                   og_image=f"{BASE}/{cover}" if cover else None, extra_head=extra))
+
+
 def build_podcast():
     eps = DATA["podcast"]
     if eps:
@@ -824,6 +909,8 @@ def build_seo_files():
     """sitemap.xml, robots.txt, llms.txt, 404.html — discoverability layer."""
     # sitemap
     entries = [f"<url><loc>{BASE}/{p}</loc></url>" for p in STATIC_PATHS]
+    entries += [f"<url><loc>{BASE}/books/{b['slug']}/</loc></url>"
+                for b in DATA["books"] if b.get("slug")]
     entries += [
         f"<url><loc>{BASE}/writing/{m['slug']}/</loc>"
         f"<lastmod>{m['date'][:10]}</lastmod></url>"
@@ -839,7 +926,7 @@ def build_seo_files():
 
     # llms.txt — the site explained to AI agents, in markdown
     books_md = "\n".join(
-        f"- [{b['title']}]({b['amazon_url'] or BASE + '/books/'}): {b.get('subtitle') or b['description']}"
+        f"- [{b['title']}]({BASE + '/books/' + b['slug'] + '/' if b.get('slug') else (b['amazon_url'] or BASE + '/books/')}): {b.get('subtitle') or b['description']}"
         for b in DATA["books"]
     )
     essays_md = "\n".join(
@@ -907,6 +994,7 @@ def main():
     build_writing_index()
     build_posts()
     build_books()
+    build_book_pages()
     build_podcast()
     build_music()
     build_about()
