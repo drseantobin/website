@@ -19,6 +19,7 @@ attention, and artificial intelligence.
 
 ## Essays
 
+- [The End of Reading Is Not the End of Thinking](https://drseantobin.ca/writing/the-end-of-reading-is-not-the-end/): We are losing a faculty. It may not be the one we think.
 - [Cold Showers Taught Me to Pray](https://drseantobin.ca/writing/cold-showers-taught-me-to-pray/): Learning to breathe, until I found I was being breathed
 - [Nobody Asked Us](https://drseantobin.ca/writing/her-was-never-science-fiction/): A robotics company just made a claim about loneliness and aimed it at the people least able to refuse.
 - [Whose AI Model Will Be in Your House?](https://drseantobin.ca/writing/the-wall-you-did-not-build/): The argument over open AI has focused on safety. The more important question is who will still be holding the tools when they are needed.
