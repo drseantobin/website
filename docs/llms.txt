@@ -19,6 +19,7 @@ attention, and artificial intelligence.
 
 ## Essays
 
+- [A Year of Writing](https://drseantobin.ca/writing/a-year-of-writing/): One hundred essays later, an honest accounting of where I am.
 - [An AI reasoned its way to God.](https://drseantobin.ca/writing/an-ai-reasoned-its-way-to-god/): Assent has never been the hard part. Even the Demons Believe
 - [AI agents built a religion](https://drseantobin.ca/writing/ai-agents-built-a-religion/): And like us, they walled it off from the part of them that wants things.
 - [The End of Reading Is Not the End of Thinking](https://drseantobin.ca/writing/the-end-of-reading-is-not-the-end/): We are losing a faculty. It may not be the one we think.

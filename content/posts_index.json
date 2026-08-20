@@ -1,5 +1,17 @@
 [
  {
+  "slug": "a-year-of-writing",
+  "title": "A Year of Writing",
+  "subtitle": "One hundred essays later, an honest accounting of where I am.",
+  "date": "2026-08-19",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/a-year-of-writing",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!NxQf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33d5c839-6062-4188-9787-b652e93e3b62_1024x608.png",
+  "description": "One hundred essays later, an honest accounting of where I am.",
+  "type": "newsletter"
+ },
+ {
   "slug": "an-ai-reasoned-its-way-to-god",
   "title": "An AI reasoned its way to God.",
   "subtitle": "Assent has never been the hard part. Even the Demons Believe",
