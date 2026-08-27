@@ -23,10 +23,24 @@ CATEGORIES_FILE = ROOT / "content" / "categories.json"
 HEADERS = {"User-Agent": "drseantobin.ca site sync (owner: seantobin.psyd@gmail.com)"}
 
 
-def get_json(url):
+def get_json(url, attempts=4):
+    """Fetch JSON, retrying on transient network errors.
+
+    Substack's archive API intermittently stalls; an unretried read timeout
+    used to kill the whole 7:30am launchd sync (see ops-sync.log, Aug 2026).
+    """
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read().decode())
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.loads(r.read().decode())
+        except OSError as e:
+            if attempt == attempts:
+                raise
+            wait = 2 ** attempt
+            print(f"  fetch failed ({e}); retrying in {wait}s "
+                  f"[{attempt}/{attempts - 1}]", file=sys.stderr)
+            time.sleep(wait)
 
 
 def fetch_archive():
