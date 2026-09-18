@@ -2,6 +2,9 @@
 # Unattended Substack -> site sync. Run by launchd (com.drseantobin.site-sync).
 # Pulls new Substack posts, rebuilds the static site, pushes to GitHub Pages.
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+# /usr/bin/git + python3 are shims that stall on an unaccepted Xcode license;
+# point them at the Command Line Tools so the unattended run never hits that prompt.
+export DEVELOPER_DIR=/Library/Developer/CommandLineTools
 REPO="/Users/Sean/Sites/drseantobin"
 LOG="$REPO/ops-sync.log"
 

@@ -264,6 +264,7 @@ def person_jsonld():
             "Catholic spirituality",
             "Attention and the interior life",
             "Spiritual warfare and deliverance ministry",
+            "Applied AI: building tools and agent systems",
         ],
         "sameAs": [u for u in SITE.get("socials", {}).values() if u]
                   + ([SITE["author_page"]] if SITE.get("author_page") else []),
@@ -410,8 +411,8 @@ def build_home():
       <span class="listen-more">Podcast appearances →</span>
     </a>
     <a class="listen-card" href="music/">
-      <h3>Worship music</h3>
-      <p>Sean leads worship, the posture the rest of the work flows from. Listen to the music.</p>
+      <h3>Music</h3>
+      <p>Songs Sean has written and recorded over the years, on Spotify and Apple Music.</p>
       <span class="listen-more">The music →</span>
     </a>
   </div>
@@ -423,7 +424,7 @@ def build_home():
 </section>
 
 <section class="section">
-  <div class="section-head"><p class="eyebrow">About</p><h2>Healing. Worship. Teaching.</h2>
+  <div class="section-head"><p class="eyebrow">About</p><h2>Healing. Creating. Teaching.</h2>
   <a class="section-more" href="about/">More about Sean →</a></div>
   <div class="pillars">{pillars}</div>
 </section>
@@ -938,8 +939,8 @@ def build_seo_files():
 
 > {SITE['intro']}
 
-Dr. Sean Tobin, Psy.D., is a clinical psychologist, Catholic author, and worship
-leader ({SITE['roles']}). His work — the Inner Exodus — is about healing,
+Dr. Sean Tobin, Psy.D., is a clinical psychologist, Catholic author, and creative
+who builds with AI ({SITE['roles']}). His work — the Inner Exodus — is about healing,
 formation, and staying fully human in the age of AI. He writes weekly essays,
 publishes books, and speaks on psychology, spiritual warfare and deliverance,
 attention, and artificial intelligence.
