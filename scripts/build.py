@@ -778,9 +778,9 @@ def build_music():
         listing = '<p class="empty-note">Discography being assembled — check back shortly.</p>'
     body = f"""
 <section class="page-head">
-  <p class="eyebrow">Music</p>
-  <h1>Worship</h1>
-  <p class="hero-sub">Sean leads worship, the posture the rest of the work flows from. Hear the full catalogue on Spotify and Apple Music.</p>
+  <p class="eyebrow">Listen</p>
+  <h1>Music</h1>
+  <p class="hero-sub">Songs Sean has written and recorded over the years, most of them worship. Hear the full catalogue on Spotify and Apple Music.</p>
   {linkbar}
 </section>
 <section class="section">{listing}</section>
@@ -874,6 +874,15 @@ def build_about():
     res_cards = "".join(f"""<a class="resource-card" href="{res_url(r, item['url'])}" target="_blank" rel="noopener">
   <h3>{esc(item['title'])}</h3><p>{esc(item['blurb'])}</p>
   <span class="listen-more">{esc(item['cta'])} →</span></a>""" for item in resources)
+    builds = DATA.get("builds", [])
+    build_cards = "".join(f"""<a class="resource-card" href="{res_url(r, item['url'])}" target="_blank" rel="noopener">
+  <h3>{esc(item['title'])}</h3><p>{esc(item['blurb'])}</p>
+  <span class="listen-more">{esc(item['cta'])} →</span></a>""" for item in builds)
+    builds_section = f"""<section class="section section-alt">
+  <div class="section-head"><p class="eyebrow">Applied AI</p><h2>What I build.</h2></div>
+  <p class="section-lede">I don't only write about AI. These are working things people use, each built to serve attention and formation rather than harvest them.</p>
+  <div class="resource-grid">{build_cards}</div>
+</section>""" if builds else ""
     res_section = f"""<section class="section free-resources">
   <p class="eyebrow" style="text-align:center">Free to keep</p>
   <h2 style="text-align:center">A few things that cost nothing.</h2>
@@ -886,6 +895,7 @@ def build_about():
 </section>
 <section class="section"><div class="post-body about-bio">{bio}</div>
 <div class="pillars">{pillars}</div></section>
+{builds_section}
 {res_section}
 <section class="quote-band">
   <blockquote>“{esc(SITE['irenaeus'])}”</blockquote>

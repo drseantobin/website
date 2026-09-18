@@ -172,6 +172,7 @@ a:focus-visible, button:focus-visible {
   text-decoration: none; margin-left: auto;
 }
 .section-more:hover { color: var(--gold); }
+.section-lede { max-width: 42rem; margin: -1.2rem 0 2rem; font-size: 1.05rem; color: var(--faded); }
 
 /* ---------- cards ---------- */
 .card-grid {
@@ -345,7 +346,7 @@ a.book-card:hover .book-3d { transform: translateY(-6px) scale(1.02); }
   font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1;
   margin: 1rem 0 1.2rem;
 }
-.page-head .hero-sub { margin: 0 auto; }
+.page-head .hero-sub { margin: 0 auto; color: var(--faded); }
 /* tighten the gap between a page title and the content section below it */
 .page-head + .section { padding-top: 2rem; }
 
