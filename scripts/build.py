@@ -863,6 +863,62 @@ def build_contact():
     write("contact/index.html", page("Contact · Dr. Sean Tobin", body, active="Contact", depth=1, path="contact/"))
 
 
+def build_card():
+    """/card — what the business-card QR opens: one-tap vCard plus the essentials."""
+    r = "../"
+    email = SITE.get("contact_email", "")
+    phone = SITE.get("card_phone", "")
+    soc = SITE["socials"]
+    book = next((b for b in DATA["books"] if b.get("amazon_url")), None)
+    vcf = "\r\n".join([
+        "BEGIN:VCARD", "VERSION:3.0",
+        "N:Tobin;Sean;;Dr.;Psy.D.", "FN:Dr. Sean Tobin",
+        "TITLE:Clinical Psychologist · Author · AI Consultant",
+        "ORG:Dr. Sean Tobin",
+        f"TEL;TYPE=CELL,VOICE:{phone}",
+        f"EMAIL;TYPE=INTERNET:{email}",
+        f"URL:{BASE}",
+        f"URL;TYPE=Substack:{SITE['substack_url']}",
+        f"URL;TYPE=LinkedIn:{soc.get('LinkedIn','')}",
+        f"NOTE:{SITE['tagline']} The Inner Exodus: {SITE['substack_url']}",
+        "END:VCARD", ""])
+    write("assets/dr-sean-tobin.vcf", vcf)
+    tel = "".join(ch for ch in phone if ch.isdigit() or ch == "+")
+    rows = [
+        ("Website", "drseantobin.ca", BASE),
+        ("Email", email, f"mailto:{email}"),
+        ("Phone", phone, f"tel:+1{tel}" if tel and not tel.startswith("+") else f"tel:{tel}"),
+        ("Essays", "The Inner Exodus on Substack", SITE["substack_url"]),
+        ("YouTube", "@drseantobin", soc.get("YouTube", "")),
+        ("LinkedIn", "Dr. Sean Tobin", soc.get("LinkedIn", "")),
+    ]
+    if book:
+        rows.append(("Latest book", book["title"], book["amazon_url"]))
+    ext = ' target="_blank" rel="noopener"'
+    rows_html = "".join(
+        f'<a class="card-row" href="{esc(href)}"{ext if href.startswith("http") else ""}>'
+        f'<span class="card-k">{esc(k)}</span><span class="card-v">{esc(v)}</span></a>'
+        for k, v, href in rows if href)
+    body = f"""
+<section class="page-head card-head">
+  <img class="contact-portrait" src="{r}assets/sean-portrait.jpg" alt="Dr. Sean Tobin" width="190" height="190">
+  <div class="contact-head-tx">
+    <p class="eyebrow">Psychologist · Author · AI Consultant</p>
+    <h1>Dr. Sean Tobin</h1>
+    <p class="hero-sub">{esc(SITE['tagline'])}</p>
+    <a class="btn btn-gold card-save" href="{r}assets/dr-sean-tobin.vcf" download="Dr Sean Tobin.vcf">Save my contact</a>
+  </div>
+</section>
+<section class="section card-section">
+  <div class="card-rows">{rows_html}</div>
+  <p class="contact-note">Good to meet you. If we talked about something specific, email is the fastest way to pick it back up.</p>
+</section>
+"""
+    write("card/index.html", page("Dr. Sean Tobin · Contact card", body, active="Contact", depth=1, path="card/",
+                                  description="Save Dr. Sean Tobin's contact: clinical psychologist, author, AI consultant.",
+                                  extra_head='<meta name="robots" content="noindex">'))
+
+
 def build_about():
     r = "../"
     bio = "".join(f"<p>{esc(b)}</p>" for b in DATA["about"]["bio"])
@@ -1010,6 +1066,7 @@ def main():
     build_music()
     build_about()
     build_contact()
+    build_card()
     build_seo_files()
     (PUBLIC / ".nojekyll").write_text("")
     cname = ROOT / "CNAME"

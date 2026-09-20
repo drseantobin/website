@@ -601,8 +601,10 @@ a.badge-link:hover { background: var(--oxblood); filter: brightness(1.15); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 720px) {
-  .topbar { gap: 0.9rem; }
-  .mainnav { gap: 0.9rem; order: 3; width: 100%; justify-content: center; padding-bottom: 0.2rem; }
+  .topbar { gap: 0.9rem; flex-wrap: wrap; }
+  .wordmark { white-space: nowrap; font-size: 1.2rem; }
+  .mainnav { gap: 0.55rem 0.8rem; order: 3; width: 100%; justify-content: center; padding-bottom: 0.2rem; }
+  .mainnav a { font-size: 0.72rem; letter-spacing: 0.1em; }
   .btn-subscribe { margin-left: auto; }
   .ep-row { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
   .ep-row .listen-more { margin-left: 0; }
@@ -611,3 +613,14 @@ a.badge-link:hover { background: var(--oxblood); filter: brightness(1.15); }
   .view-list .card-img { width: 5.5rem; min-width: 5.5rem; }
   .view-list .card-body { padding: 0.9rem 1rem; }
 }
+
+/* ---------- /card (business-card QR landing) ---------- */
+.card-head .contact-head-tx { max-width: 34rem; }
+.card-save { margin-top: 1.2rem; display: inline-block; font-size: 1.05rem; padding: 0.9rem 1.6rem; }
+.card-section { max-width: 34rem; }
+.card-rows { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+.card-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.95rem 0.2rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink); }
+.card-row:hover { background: var(--linen-alt); }
+.card-k { color: var(--faded); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+.card-v { text-align: right; overflow-wrap: anywhere; }
+.card-section .contact-note { margin-top: 1.6rem; color: var(--faded); }
