@@ -893,8 +893,10 @@ def build_card():
         ("Facebook", "Dr. Sean Tobin", soc.get("Facebook", "")),
         ("YouTube", "@drseantobin", soc.get("YouTube", "")),
         ("LinkedIn", "Dr. Sean Tobin", soc.get("LinkedIn", "")),
-        ("Books", "All books", f"{r}books/"),
     ]
+    book = next((b for b in DATA["books"] if b.get("amazon_url")), None)
+    if book:
+        rows.append(("Latest book", book["title"], book["amazon_url"]))
     ext = ' target="_blank" rel="noopener"'
     rows_html = "".join(
         f'<a class="card-row" href="{esc(href)}"{ext if href.startswith("http") else ""}>'

@@ -615,7 +615,8 @@ a.badge-link:hover { background: var(--oxblood); filter: brightness(1.15); }
 }
 
 /* ---------- /card (business-card QR landing) ---------- */
-.card-head .contact-head-tx { max-width: 34rem; }
+.card-head { flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.card-head .contact-head-tx { flex: 0 1 auto; width: 100%; max-width: 34rem; margin: 0 auto; }
 .card-save { margin-top: 1.2rem; display: inline-block; font-size: 1.05rem; padding: 0.9rem 1.6rem; }
 .card-section { max-width: 34rem; }
 .card-rows { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
