@@ -875,19 +875,20 @@ def build_card():
         "N:Tobin;Sean;;Dr.;Psy.D.", "FN:Dr. Sean Tobin",
         "TITLE:Clinical Psychologist · Author · AI Consultant",
         "ORG:Dr. Sean Tobin",
-        f"TEL;TYPE=CELL,VOICE:{phone}",
         f"EMAIL;TYPE=INTERNET:{email}",
         f"URL:{BASE}",
         f"URL;TYPE=Substack:{SITE['substack_url']}",
         f"URL;TYPE=LinkedIn:{soc.get('LinkedIn','')}",
         f"NOTE:{SITE['tagline']} The Inner Exodus: {SITE['substack_url']}",
         "END:VCARD", ""])
+    if phone:
+        vcf = vcf.replace("END:VCARD", f"TEL;TYPE=CELL,VOICE:{phone}\r\nEND:VCARD")
     write("assets/dr-sean-tobin.vcf", vcf)
     tel = "".join(ch for ch in phone if ch.isdigit() or ch == "+")
     rows = [
         ("Website", "drseantobin.ca", BASE),
         ("Email", email, f"mailto:{email}"),
-        ("Phone", phone, f"tel:+1{tel}" if tel and not tel.startswith("+") else f"tel:{tel}"),
+        ("Phone", phone, (f"tel:+1{tel}" if not tel.startswith("+") else f"tel:{tel}") if tel else ""),
         ("Essays", "The Inner Exodus on Substack", SITE["substack_url"]),
         ("YouTube", "@drseantobin", soc.get("YouTube", "")),
         ("LinkedIn", "Dr. Sean Tobin", soc.get("LinkedIn", "")),
