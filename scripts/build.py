@@ -869,7 +869,6 @@ def build_card():
     email = SITE.get("contact_email", "")
     phone = SITE.get("card_phone", "")
     soc = SITE["socials"]
-    book = next((b for b in DATA["books"] if b.get("amazon_url")), None)
     vcf = "\r\n".join([
         "BEGIN:VCARD", "VERSION:3.0",
         "N:Tobin;Sean;;Dr.;Psy.D.", "FN:Dr. Sean Tobin",
@@ -890,11 +889,12 @@ def build_card():
         ("Email", email, f"mailto:{email}"),
         ("Phone", phone, (f"tel:+1{tel}" if not tel.startswith("+") else f"tel:{tel}") if tel else ""),
         ("Essays", "The Inner Exodus on Substack", SITE["substack_url"]),
+        ("Instagram", "@drseantobin", soc.get("Instagram", "")),
+        ("Facebook", "Dr. Sean Tobin", soc.get("Facebook", "")),
         ("YouTube", "@drseantobin", soc.get("YouTube", "")),
         ("LinkedIn", "Dr. Sean Tobin", soc.get("LinkedIn", "")),
+        ("Books", "All books", f"{r}books/"),
     ]
-    if book:
-        rows.append(("Latest book", book["title"], book["amazon_url"]))
     ext = ' target="_blank" rel="noopener"'
     rows_html = "".join(
         f'<a class="card-row" href="{esc(href)}"{ext if href.startswith("http") else ""}>'
