@@ -913,7 +913,7 @@ def build_card():
 </section>
 <section class="section card-section">
   <div class="card-rows">{rows_html}</div>
-  <p class="contact-note">Grateful our paths crossed. Every blessing to you and your work.</p>
+  <p class="contact-note">Grateful our paths crossed.</p>
 </section>
 """
     write("card/index.html", page("Dr. Sean Tobin · Contact card", body, active="Contact", depth=1, path="card/",
