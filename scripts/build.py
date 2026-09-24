@@ -676,6 +676,9 @@ def build_book_pages():
         paras = "".join(f"<p>{esc(t)}</p>" for t in b.get("long", []))
         buy = (f'<a class="btn btn-gold" href="{esc(b["amazon_url"])}" target="_blank" rel="noopener">Buy on Amazon</a>'
                if b.get("amazon_url") else "")
+        buy += "".join(
+            f'<a class="btn btn-ghost" href="{esc(l["url"])}" target="_blank" rel="noopener">{esc(l["label"])}</a>'
+            for l in b.get("extra_links", []))
         assess = ""
         if b.get("assessment_url"):
             assess = f"""
