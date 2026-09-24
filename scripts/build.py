@@ -890,7 +890,6 @@ def build_card():
         ("Phone", phone, (f"tel:+1{tel}" if not tel.startswith("+") else f"tel:{tel}") if tel else ""),
         ("Essays", "The Inner Exodus on Substack", SITE["substack_url"]),
         ("Instagram", "@drseantobin", soc.get("Instagram", "")),
-        ("Facebook", "Dr. Sean Tobin", soc.get("Facebook", "")),
         ("YouTube", "@drseantobin", soc.get("YouTube", "")),
         ("LinkedIn", "Dr. Sean Tobin", soc.get("LinkedIn", "")),
     ]
