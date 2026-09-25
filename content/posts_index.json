@@ -1,5 +1,17 @@
 [
  {
+  "slug": "i-wrote-a-book-about-humanity-in",
+  "title": "I Wrote a Book About Humanity in the Age of AI",
+  "subtitle": "It is not about what we will do with AI. It is about what AI will do to us.",
+  "date": "2026-09-24",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/i-wrote-a-book-about-humanity-in",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!hceC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99652efb-cdf3-4169-b864-634cf33f2849_1672x941.png",
+  "description": "It is not about what we will do with AI. It is about what AI will do to us.",
+  "type": "newsletter"
+ },
+ {
   "slug": "we-named-ourselves-after-our-work",
   "title": "The First Generation That Cannot Tell a Child What He Will Be",
   "subtitle": "The fear about machines and jobs is an identity crisis arriving at the scale of a civilization, and the bill comes due before the unemployment numbers do.",
