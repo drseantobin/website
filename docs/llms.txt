@@ -19,6 +19,7 @@ attention, and artificial intelligence.
 
 ## Essays
 
+- [Curious About Muse but Don't Know What to Type?](https://drseantobin.ca/writing/tell-it-youre-overwhelmed/): Type exactly that. A plain guide to starting with AI when you're already overwhelmed.
 - [The Year AI Comes Into the Room](https://drseantobin.ca/writing/the-year-ai-comes-into-the-room/): A pendant, new glasses, and a screenless device for your pocket. My hope is that they give us back our presence.
 - [I Wrote a Book About Humanity in the Age of AI](https://drseantobin.ca/writing/i-wrote-a-book-about-humanity-in/): It is not about what we will do with AI. It is about what AI will do to us.
 - [The First Generation That Cannot Tell a Child What He Will Be](https://drseantobin.ca/writing/we-named-ourselves-after-our-work/): The fear about machines and jobs is an identity crisis arriving at the scale of a civilization, and the bill comes due before the unemployment numbers do.

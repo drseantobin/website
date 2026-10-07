@@ -1,5 +1,17 @@
 [
  {
+  "slug": "tell-it-youre-overwhelmed",
+  "title": "Curious About Muse but Don't Know What to Type?",
+  "subtitle": "Type exactly that. A plain guide to starting with AI when you're already overwhelmed.",
+  "date": "2026-10-06",
+  "audience": "everyone",
+  "paid": false,
+  "url": "https://drseantobin.substack.com/p/tell-it-youre-overwhelmed",
+  "cover_image": "https://substackcdn.com/image/fetch/$s_!K9iK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3576f226-658d-4a13-87b6-3b309c48dd38_1024x608.jpeg",
+  "description": "Type exactly that. A plain guide to starting with AI when you're already overwhelmed.",
+  "type": "newsletter"
+ },
+ {
   "slug": "the-year-ai-comes-into-the-room",
   "title": "The Year AI Comes Into the Room",
   "subtitle": "A pendant, new glasses, and a screenless device for your pocket. My hope is that they give us back our presence.",
@@ -664,8 +676,8 @@
   "title": "The Mark of the Beast Isn’t Coming. It’s Already Here.",
   "subtitle": "What Revelation is actually diagnosing — and why the real danger has nothing to do with microchips",
   "date": "2026-04-07",
-  "audience": "everyone",
-  "paid": false,
+  "audience": "only_paid",
+  "paid": true,
   "url": "https://drseantobin.substack.com/p/the-mark-of-the-beast-isnt-coming",
   "cover_image": "https://substackcdn.com/image/fetch/$s_!kmXS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1933333-d3cc-4a79-8ba2-29c2edf4bb5c_1536x1024.png",
   "description": "What Revelation is actually diagnosing — and why the real danger has nothing to do with microchips",
